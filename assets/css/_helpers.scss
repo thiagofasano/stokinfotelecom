@@ -1,0 +1,91 @@
+/* Cores */
+$primary: #2067CA;
+$secundary: #53D38D;
+$silver: #979797;
+$silver-light: #F5F5F5;
+$white: #fff;
+$black: #000;
+
+
+/* Mixins */
+@mixin break($breakpoint) {
+
+  @if $breakpoint == "mobile" {
+		@media (min-width: 321px) and (max-width: 1021px) {
+      @content;
+    }
+  }
+
+  // @else if $breakpoint == "tablet" {
+  //   @media (min-width: 480px) and (max-width: 998px) {
+  //     @content;
+  //   }
+  // }
+
+  @else if $breakpoint == "desk" {
+    @media (min-width: 1024px) {
+      @content;
+    }
+  }
+
+}
+
+@media (max-width: 1023px) {
+	.hidden-mobile { display: none; }
+}
+
+@media (min-width: 1024px) {
+	.hidden-desk { display: none; }
+}
+
+/* GRID */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+
+  @include break(desk){
+    flex-direction: row;
+  }
+}
+
+.column {
+  padding: 5px;
+  margin: 5px 0;
+}
+
+.container {
+  max-width: 1140px;
+  margin: 0 auto;
+  padding: 0 20px;
+  position: relative;
+}
+
+
+.title {
+  text-transform: uppercase;
+  margin: 50px 0;
+
+  h3 {
+    font-weight: 100;
+    text-transform: initial;
+  }
+}
+
+
+.btn {
+  background-color: $secundary; 
+  border-radius: 5px;
+  padding: 8px 20px;
+  -webkit-box-shadow: 0px 0px 4px 0px rgba(10, 10, 10, 0.18);
+  -moz-box-shadow:    0px 0px 4px 0px rgba(10, 10, 10, 0.18);
+  box-shadow:         0px 0px 4px 0px rgba(10, 10, 10, 0.18);
+  color: $white;
+  font-size: 85%;
+}

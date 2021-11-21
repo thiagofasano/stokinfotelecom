@@ -1,0 +1,17 @@
+{
+        "Rio de Janeiro": [
+            { "velocidade": "10 MB", "valor": 49 },
+            { "velocidade": "30 MB", "valor": 69 },
+            { "velocidade": "50 MB", "valor": 99 },
+            { "velocidade": "70 MB", "valor": 119 },
+            { "velocidade": "100 MB", "valor": 199 }
+        ], 
+
+        "Bahia": [
+            { "velocidade": "10 MB", "valor": 99 },
+            { "velocidade": "30 MB", "valor": 119 },
+            { "velocidade": "50 MB", "valor": 159 },
+            { "velocidade": "70 MB", "valor": 180 },
+            { "velocidade": "100 MB", "valor": 199 }
+        ]
+}
