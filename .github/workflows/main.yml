@@ -11,7 +11,7 @@ jobs:
     - name: 📂 Sync files
       uses: SamKirkland/FTP-Deploy-Action@4.0.0
       with:
-        server: ftp.stokinfotelecom.com.br
-        username: admin@stokinfotelecom.com.br
+        server: ${{ secrets.ftp_server }}
+        username: ${{ secrets.ftp_login }}
         password: ${{ secrets.ftp_password }}
         port: 21
