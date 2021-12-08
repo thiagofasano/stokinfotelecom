@@ -22,8 +22,7 @@
     }
 
     &-logo {
-
-
+       img { margin-top: 8px }
     }
 
     &-anatel {
@@ -64,7 +63,7 @@
             li {
 
                 @include break(desk){
-                    padding: 15px 30px;
+                    padding: 15px;
                 }
 
                 a {
@@ -72,7 +71,6 @@
 
                     &:hover {
                         color: $primary;
-                        font-weight: bold;
                     }
                 }
             }
@@ -123,6 +121,27 @@
         font-size: 13px;
         margin: 0;
         line-height: 23px;
+    }
+
+    .planos-ajuda {
+        margin: 25px 0;
+
+        h2 {
+            font-size: 26px;
+            margin: 0 auto;
+        }
+
+        form {
+            margin: 25px 0;
+            width: 100%;
+            display: flex;
+            justify-content: space-around;
+
+            input {
+                margin: 0 5px;
+                padding: 10px;
+            }
+        }
     }
 }
 
@@ -404,13 +423,17 @@ background: linear-gradient(0deg, rgba(31,177,97,1) 0%, rgba(11,199,96,1) 47%, r
     background: linear-gradient(146deg, rgb(0, 76, 174) 20%, rgb(0, 234, 255) 100%);
 
     .row {
-        flex-direction: column;
         justify-content: space-around;
     }
 
     @include break(desk){
         .row {
             flex-direction: row;
+
+            .title , .numeros {
+                width: 50%;
+                text-align: center;
+            }
         }
     }
 
@@ -441,6 +464,34 @@ background: linear-gradient(0deg, rgba(31,177,97,1) 0%, rgba(11,199,96,1) 47%, r
 
  
 }
+
+.section-trabalhe  {
+    padding: 50px 0; 
+    
+    .row {
+        justify-content: space-around;
+        flex-direction: row;
+
+        .title , .email {
+            width: 50%;
+            text-align: center;
+        }
+
+        form {
+            width: 80%;
+            margin: 30px auto;
+
+            select {
+                margin: 10px 0;
+            }
+
+            input[type="submit"] {
+                margin-top: 20px
+            }
+        }
+    }
+}
+
 
 #perguntas {
     background: #F5F5F5;
@@ -478,4 +529,17 @@ background: linear-gradient(0deg, rgba(31,177,97,1) 0%, rgba(11,199,96,1) 47%, r
 
 select{
     padding: 10px;
+}
+
+
+.central-cliente{
+width: 135px;
+background: #0065BB;
+color: #fff;
+font-size: 13px;
+display: block;
+padding: 5px;
+border-radius: 5px;
+text-align: center;
+color: #fff!important;
 }

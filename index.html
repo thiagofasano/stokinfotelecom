@@ -34,8 +34,8 @@
                     <ul class="">
                         <li><a href="#planos">Planos</a></li>
                         <li><a href="#sobre">Sobre Nós</a></li>
-                        <li><a href="#atendimento">Atendimento</a></li>
-                        <li><a href="#atendimento">Área do Cliente</a></li>
+                        <li><a href="#atendimento">Fale  Conosco</a></li>
+                        <li><a href="#central" class="central-cliente">Central do Cliente</a></li>
                     </ul>
                 </div>
 
@@ -60,7 +60,15 @@
             <div class="row">
             </div>
 
-            <p class="planos-obs">* Valor já com desconto de R$ 10,00 para pagamento até a data de vencimento.</small></p>
+            <div class="row planos-ajuda">
+                <h2>Quer ajuda para escolher o melhor plano? Nós ligamos para você!</h2>
+                <form method="post">
+                    <input name="nome" type="text" placeholder="Nome">
+                    <input name="telefone" type="text" placeholder="DDD + Telefone">
+                    <input type="submit" value="Enviar" class="btn btn-primary">
+                </form>
+            </div>
+
             <p class="planos-obs">* Taxa de instalação não inclusa.</small></p>
             <p class="planos-obs">* Consulte disponbilidade para sua localidade.</p>
 
@@ -80,7 +88,7 @@
                 </div>
         </div>
 
-            <p>Somos uma empresa 100% legalizada e homologada pela ANATEL (Agência Nacional de Telecomunicação). </p><p>Prestamos serviços de internet banda larga de altíssimo desempenho, oferecendo ao nosso consumidor o que há de mais avançado em conectividade através de fibra óptica. </p>
+            <p>Somos uma empresa legalizada e homologada pela ANATEL (Agência Nacional de Telecomunicação). </p><p>Prestamos serviços de internet banda larga de altíssimo desempenho, oferecendo ao nosso consumidor o que há de mais avançado em conectividade através de fibra óptica. </p>
 
             <div class="diferenciais">
 
@@ -148,6 +156,9 @@
 
 
         <div class="perguntas-e-respostas">
+            <p class="pergunta"><a href="#pergunta1">Como faço para assinar?</a></p>
+            <p class="resposta">Não é necessário ter nenhum telefone fixo para adquirir sua Banda Larga.</p>
+
             <p class="pergunta"><a href="#pergunta1">É preciso ter um telefone fixo para assinar?</a></p>
             <p class="resposta">Não é necessário ter nenhum telefone fixo para adquirir sua Banda Larga.</p>
 
@@ -179,6 +190,7 @@
                     <div class="title">
                         <h2>Fale Conosco</h2>
                         <p>Segunda a Domingo de 9h às 18h.</p>
+                        <p></p>
                     </div>
 
 
@@ -191,13 +203,61 @@
         </div>
     </section>
 
+
+    <section id="trabalhe" class="section section-trabalhe">
+        <div class="container">
+
+            <div class="row">
+
+
+                    <div class="title">
+                        <h2>Trabalhe Conosco</h2>
+                        <p>buscamos pessoas que deseja cumprir nosso propósito de melhorar a vida das pessoas através da tecnologia.</p>
+                    </div>
+
+
+                    <div class="email">
+                        <form   action="https://formspree.io/f/xwkagjew"
+                        method="POST"
+                        enctype="multipart/form-data">
+
+                            <input type="text" name="nome" placeholder="Nome">
+                            
+
+                            <select name="area">
+                                <option value="" disabled selected>Área de Interesse</option>
+                                <option value="Atendimento">Atendimento</option>
+                                <option value="Comercial">Comercial</option>
+                                <option value="Engenharia">Engenharia</option>
+                                <option value="Escritório">Escritório</option>
+                                <option value="Recursos Humanos">Recursos Humanos</option>
+                                <option value="Suporte técnico">Suporte técnico</option>
+                                <option value="Técnico">Técnico</option>
+                            </select>  
+                            
+                            <input type="file" name="upload" placeholder="Currículo">
+                            
+                            <input type="submit" value="Enviar" class="btn btn-primary">
+                        </form>
+                    </div>
+
+            </div>
+        </div>
+    </section>
+
     <footer>
         <div class="container">
             <ul>
                 <li><img src="assets/images/anatel.png" width="150px" /></li>
                 <li><span id="siteseal"><script async type="text/javascript" src="https://seal.godaddy.com/getSeal?sealID=J7FOqDhGIDLuBK6b9JGYSHHJY02NnkEDyqn8LwsFez6CdmduKFdv7YerloPG"></script></span></li>
-                <li>Ligue ou chame no Whatsapp: <span class="celular"></span> <span class="telefone"></span><br /> A Stok Info é um provedor de internet por Fibra Óptica, regularizado e certificado através das principais normas regulamentadora da área. Planos de Internet para o Rio de Janeiro. </li>
+                <li>A Stok Info é um provedor de internet por Fibra Óptica, regularizado e certificado através das principais normas regulamentadora da área. Planos de Internet para o Rio de Janeiro. <br /><br /> R. Sd. Servino Mengarda, 61 - Vila Cosmos, Rio de Janeiro - RJ, CEP 21210-840.</li>
             </ul>
+        </div>
+
+        <div class="endereco">
+            <div class="container">
+                
+            </div>  
         </div>
     </footer>
 
