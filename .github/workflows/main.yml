@@ -9,10 +9,9 @@ jobs:
       uses: actions/checkout@v2
 
     - name: 📂 Sync files
-      uses: SamKirkland/FTP-Deploy-Action@4.2.0
+      uses: SamKirkland/FTP-Deploy-Action@4.0.0
       with:
         server: ftp.stokinfotelecom.com.br
         username: admin@stokinfotelecom.com.br
         password: ${{ secrets.ftp_password }}
-        protocol: ftps
-        port: 20
+        port: 21
