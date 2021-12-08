@@ -1,44 +1,50 @@
+const localizacaoAtual = document.querySelector(
+  ".localizacaoAtual .localidade"
+);
 const localizacaoBtn = document.querySelector("#localizacaoBtn");
 const localizacaoOptions = document.querySelector("#localizacaoOptions");
 const sectionPlanos = document.querySelector("#planos .row");
+const telefone = document.querySelectorAll(".telefone");
+const celular = document.querySelectorAll(".celular");
+
 let planos;
 
-fetch("../assets/data/planos.json")
-  .then((response) => response.json())
-  .then((data) => (planos = data));
-
-localizacaoBtn.addEventListener("click", defineLocalidade);
-
-function defineLocalidade() {
-  if (!localizacaoOptions.value) return alert("Selecione uma área.");
-
-  montaPlanos(localizacaoOptions.value);
-
-  $.modal.close();
-}
-
-function montaPlanos(localidade) {
-  sectionPlanos.innerHTML = planos[localidade].map((plano) => {
-    return `
-      <div class="plano ${plano.id}">
-        <div class="plano-title">
-            <h3>${plano.velocidade}</h3>
-        </div>
-        <div class="plano-body">
-        </div>
-        <div class="plano-price">
-            <h3>${plano.valor}</h3>
-            <div>,90<span>/mês</span></div>
-        </div>
-        <div class="plano-obs">
-            <a href="#assine" rel="modal:open" id="${plano.id}" class="btn btn-secondary"></a>
-        </div> 
-      </div>
-        `;
-  });
-}
-
 $(document).ready(function () {
+  const next = document.querySelector("#next");
+  const prev = document.querySelector("#prev");
+  const slideArray = [];
+  for (let i = 0; i < document.querySelectorAll(".banner div").length; i++) {
+    slideArray.push(
+      document.querySelectorAll(".banner div")[i].dataset.background
+    );
+  }
+
+  let currentSlideIndex = -1;
+
+  function advanceSliderItem() {
+    currentSlideIndex++;
+    if (currentSlideIndex >= slideArray.length) {
+      currentSlideIndex = 0;
+    }
+    document.querySelector(".banner").style.cssText =
+      'background: url("' + slideArray[currentSlideIndex] + '") no-repeat;';
+  }
+
+  function previousSliderItem() {
+    currentSlideIndex--;
+    if (currentSlideIndex <= -1) {
+      currentSlideIndex = slideArray.length - 1;
+    }
+    document.querySelector(".banner").style.cssText =
+      'background: url("' + slideArray[currentSlideIndex] + '") no-repeat;';
+  }
+
+  next.addEventListener("click", advanceSliderItem);
+  prev.addEventListener("click", previousSliderItem);
+
+  let intervalID = setInterval(advanceSliderItem, 5000);
+  advanceSliderItem();
+
   var new_width = $(".container").width();
 
   $(".header-menu ul li a").on("click", function (event) {
@@ -65,27 +71,65 @@ $(document).ready(function () {
     return false;
   });
 
-  $("a[data-modal]")
-    .on("show", function () {
-      $("body").addClass("modal-open");
-    })
-    .on("hidden", function () {
-      $("body").removeClass("modal-open");
-    });
+  localizacaoBtn.addEventListener("click", defineLocalEmontaPlanos);
 
-  $(
-    ".selecionado-plano1 , .selecionado-plano2, .selecionado-plano3, .selecionado-plano4, .selecionado-plano5, .selecionado-plano6"
-  ).hide();
+  function defineLocalEmontaPlanos() {
+    if (!localizacaoOptions.value) return alert("Selecione uma área.");
 
-  $(".assine-ja").on("click", function () {
-    $(
-      ".selecionado-plano1 , .selecionado-plano2, .selecionado-plano3, .selecionado-plano4, .selecionado-plano5, .selecionado-plano6"
-    ).hide();
-    var planoEscolhido = $(this).attr("id");
-    $(".selecionado-" + planoEscolhido).show();
-    var planoTexto = $(".selecionado-" + planoEscolhido).text();
-    $("#planoText").val(planoTexto);
-  });
+    localizacaoAtual.innerHTML =
+      localizacaoOptions.options[localizacaoOptions.selectedIndex].text;
+
+    fetch("../assets/data/data.json")
+      .then((response) => response.json())
+      .then((data) => {
+        for (let i = 0; celular.length > i; i++) {
+          celular[i].innerHTML = data[localizacaoOptions.value].celular;
+        }
+
+        for (let i = 0; telefone.length > i; i++) {
+          telefone[i].innerHTML = data[localizacaoOptions.value].telefone;
+        }
+      });
+
+    fetch("../assets/data/data.json")
+      .then((response) => response.json())
+      .then((data) => {
+        sectionPlanos.innerHTML = data[localizacaoOptions.value].planos
+          .map((plano) => {
+            return `
+              <div class="plano ${plano.id}">
+                <div class="plano-title">
+                    <h3>${plano.velocidade}</h3>
+                </div>
+                <div class="plano-body">
+                <p class="preco-antigo">R$ ${plano.valorAntigo}, 90</p>
+
+                </div>
+                <div class="plano-price">
+                    <h3><small>R$</small> ${plano.valor}</h3>
+                    <div>,90<span>/mês*</span></div>
+                </div>
+                <div class="plano-obs">
+                    <ul>
+                        ${plano.obs
+                          .map(
+                            (ob) =>
+                              `<li><img src="assets/images/${ob.icone}.png" />${ob.texto}</li>`
+                          )
+                          .join("")}
+                    </ul>
+                    <a href=${
+                      plano.url
+                    } target="_blank" class="btn btn-secondary">Assine Já</a>
+                </div> 
+              </div>
+                `;
+          })
+          .join("");
+      });
+
+    $.modal.close();
+  }
 
   $(".resposta").hide();
 

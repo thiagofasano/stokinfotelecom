@@ -5,17 +5,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>STOK INFO TELECOM - Internet por Fibra Óptica de alto desempenho </title>
+    <link rel="preload" href="assets/images/banner.jpg" as="image">
+    <link rel="preload" href="assets/images/banner2.jpg" as="image">
+
     <meta name="description" content="STOK INFO TELECOM - Internet por Fibra Óptica de alto desempenho no RJ IPASE, ITAIAIA E BAHIA">
     <meta name="keywords" content="StokInfo, Stok Info, Internet, Banda Larga, Internet Fibra Óptica, Internet rápida, Internet Ipase, Internet Itaiaia, Internet Bahia, Banda Larga IPASE, Banda Larga Itaiaia, Banda Larga Bahia Provedor de Internet">
-    <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,900" rel="stylesheet">
-    <link rel="stylesheet" href="assets/css/master.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;400;600;800&display=swap" rel="stylesheet">    <link rel="stylesheet" href="assets/css/master.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.css" />
 </head>
 <body>
 
     <div class="localizacaoAtual">
         <div class="container">
-            <small>Área de cobertura: <span></span> <a href="#localizacao" data-modal="#localizacao">(alterar)</a></small>
+            <div><img src="assets/images/whatapp.png" />Ligue ou chame no Whatsapp: <span class="celular"></span> <span class="telefone"></span></div>
+        <div><span class="localidade"></span> <a href="#localizacao" data-modal="#localizacao">Alterar</a></div>
         </div>
     </div>
 
@@ -24,13 +29,13 @@
             <div class="row">
                 <div class="column header-logo"><a href="#"><img src="assets/images/logo.png" alt="STOK INFO Telecom"></a></div>
 
-                <div class="column header-anatel"><img src="assets/images/anatel.png" alt="Provedor autorizado pela Anatel" /></div>
 
                 <div class="column header-menu">
                     <ul class="">
                         <li><a href="#planos">Planos</a></li>
                         <li><a href="#sobre">Sobre Nós</a></li>
                         <li><a href="#atendimento">Atendimento</a></li>
+                        <li><a href="#atendimento">Área do Cliente</a></li>
                     </ul>
                 </div>
 
@@ -38,10 +43,10 @@
         </div>
 
         <div class="banner">
-            <div class="container">
-                <h2>CONECT-SE CONOSCO</h2>
-                <h3>INTERNET POR FIBRA ÓPTICA DE ALTO DESEMPENHO</h3>
-            </div>
+            <div class="slide" data-background="assets/images/banner.jpg"></div>
+            <div class="slide" data-background="assets/images/banner2.jpg"></div>
+            <a id="prev" class="control prev"><img src="assets/images/arrow-left.png"></a>
+            <a id="next" class="control next"><img src="assets/images/arrow-right.png"></a>
         </div>
     </header>
 
@@ -53,25 +58,60 @@
             </div>
 
             <div class="row">
-
-
-
-
-
-                <p class="aviso"><small>* Velocidade e preços podem variar entre estados.</small></p>
             </div>
+
+            <p class="planos-obs">* Valor já com desconto de R$ 10,00 para pagamento até a data de vencimento.</small></p>
+            <p class="planos-obs">* Taxa de instalação não inclusa.</small></p>
+            <p class="planos-obs">* Consulte disponbilidade para sua localidade.</p>
+
         </div>
     </section>
 
-
-
     <section id="sobre" class="section section-sobre">
         <div class="container">
-            <div class="title">
-                <h2>Sobre Nós</h2>
-            </div>
 
-            <p>A STOK INFO conecta você ao mundo. Somos uma empresa 100% legalizada e homologada pela ANATEL (Agência Nacional de Telecomunicação). Prestamos serviços de internet banda larga de altíssimo desempenho, oferecendo ao nosso consumidor o que há de mais avançado em conectividade através de fibra óptica. </p>
+
+            <div style="display: flex; align-items: center;">
+                <img src="assets//images/globo.png"/>
+                <div class="circle-animate"></div>
+                <div class="title">
+                    <h2>STOK INFO TELECOM</h2>
+                    <h1>Conectamos você com velocidade e estabilidade.</h1>
+                </div>
+        </div>
+
+            <p>Somos uma empresa 100% legalizada e homologada pela ANATEL (Agência Nacional de Telecomunicação). </p><p>Prestamos serviços de internet banda larga de altíssimo desempenho, oferecendo ao nosso consumidor o que há de mais avançado em conectividade através de fibra óptica. </p>
+
+            <div class="diferenciais">
+
+                <div class="bgsuporte">
+                    <h2>
+                        Suporte Online
+                        <small>Atendimento até nos finais de semana.</small>
+                    </h2>
+                </div>
+
+                <div class="bgcentral">
+                    <h2>
+                        Área do Cliente
+                        <small>Segunda via de boleto, ajuda, tudo online.</small>
+                    </h2>
+                </div>
+
+                <div class="bgwifi">
+                    <h2>
+                        Ultra Wi-Fi
+                        <small>Internet Wi-Fi rápida através de fibra óptica.</small>
+                    </h2>
+                </div>
+
+                <div class="bgestabilidade">
+                    <h2>
+                        Estabilidade
+                        <small>Temos o que há de mais avançado em conexão.</small>
+                    </h2>
+                </div>
+            </div>
         </div>
     </section>
 
@@ -84,80 +124,69 @@
                 
                 <div class="column section-certificacoes-texto">
                 <p><strong>NOSSAS CERTIFICAÇÕES</strong></p>
-                <p>A Stok Info é um provedor regularizado e certificado através das principais normas regulamentadora da área, como o RN10, RN35, Anatel e CREA, que asseguram mais segurança e qualidade.</p>
+                <p>A Stok Info é um provedor regularizado e certificado através das principais normas regulamentadora da área, que asseguram mais segurança e qualidade.</p>
+                
+                <div style="display: flex; justify-content: space-between; margin-top: 25PX;">
+                <img src="assets/images/certificado-anatel.png" />
+                <img src="assets/images/crea.png" />
+                <img src="assets/images/rn10.png" />
+                <img src="assets/images/rn35.png" />
+            </div>
+                <!-- <p>RN10, RN35, Anatel e CREA.</p> -->
                 </div>
             </div>
         </div>
     </section>
 
+
+
+    <section id="perguntas" class="section">
+
+<div class="container">
+
+    <h2>DÚVIDAS FREQUENTES</h2>
+
+
+        <div class="perguntas-e-respostas">
+            <p class="pergunta"><a href="#pergunta1">É preciso ter um telefone fixo para assinar?</a></p>
+            <p class="resposta">Não é necessário ter nenhum telefone fixo para adquirir sua Banda Larga.</p>
+
+            <p class="pergunta"><a href="#pergunta2">Qual a diferença da Fibra Óptica para outras tecnologias?</a></p>
+            <p class="resposta">Com a Fibra pode-se atingir uma velocidade de transmissão de dados muito maior que com outras tecnologias, como o cabo metálico ou coaxial. Além disso, a Fibra oferece maior estabilidade de sinal, não sofrendo interferências eletromagnéticas ou quedas de transmissão. Atualmente não existem outros meios físicos de transmissão com a qualidade e a capacidade de transmissão da Fibra.</p>
+
+            <p class="pergunta"><a href="#pergunta3">Existe algum limite de download e upload?</a></p>
+            <p class="resposta">Com nossa internet você navega ilimitado sem pagar nada a mais por isso.</p>
+
+            <p class="pergunta"><a href="#pergunta4">A internet funciona mesmo em dias de chuva?</a></p>
+            <p class="resposta">A Fibra óptica possui menos risco de interferências. Por isso não superaquece e não são afetados pela chuva, vento ou outros fatores ambientais. O resultado é uma conexão bem mais estável.</p>
+
+            <p class="pergunta"><a href="#pergunta5">Onde consigo a 2 via do boleto?</a></p>
+            <p class="resposta">Através da central de atendimento ao cliente. </p>
+
+            <p class="pergunta"><a href="#pergunta6">Quais as formas de pagamento?</a></p>
+            <p class="resposta">Débito em Conta ou Boleto.</p>
+        </div>
+    </div>
+
+    </section>
+
     <section id="atendimento" class="section section-atendimento">
         <div class="container">
-            <div class="title">
-                <h2>Atendimento</h2>
-            </div>
-
-            <p>Em que podemos ajudar? Escolha uma das opções abaixo para entrar em contato com nossa equipe de especialistas. </p>
 
             <div class="row">
-                <div class="col section-atendimento-numeros">
-                    <div class="televendas-ipase">
-                        <h2>TELEVENDAS</h2>
-                        <h3>21 2482-9871 <small>Whatsapp</small>21 99067-3827</h3>
-                        <p>comercial@stokinfotelecom.om.br</p>
+
+
+                    <div class="title">
+                        <h2>Fale Conosco</h2>
+                        <p>Segunda a Domingo de 9h às 18h.</p>
                     </div>
 
-                    <div class="televendas-itatiaia">
-                        <h2>TELEVENDAS</h2>
-                        <h3>24 3352-1377 / 24 3352-1832 <small>Whatsapp</small>24 98875-0090</h3>
-                        <p>comercial@stokinfotelecom.om.br</p>
+
+                    <div class="numeros">
+                        <h2><img src="assets/images/whatapp.png"><span class="celular"></span></h2>
+                        <h2><img src="assets/images/telefone.png"><span class="telefone"></span></h2>
                     </div>
 
-                    <div class="televendas-bahia">
-                        <h2>TELEVENDAS</h2>
-                        <h3>71 3435-0747 <small>Whatsapp</small>71 98888-3143</h3>
-                        <p>comercial@stokinfotelecom.om.br</p>
-                    </div>
-
-                    <div class="atendimento-ipase">
-                        <h2>ATENDIMENTO AO CLIENTE</h2>
-                        <h3>21 2482-9871</h3>
-                        <p>sac@stokinfotelecom.com.br</p>
-                    </div>
-
-                    <div class="atendimento-itatiaia">
-                        <h2>ATENDIMENTO AO CLIENTE</h2>
-                        <h3>24 3352-1377</h3>
-                        <p>sac@stokinfotelecom.com.br</p>
-                    </div>
-
-                    <div class="atendimento-bahia">
-                        <h2>ATENDIMENTO AO CLIENTE</h2>
-                        <h3>71 3435-0747</h3>
-                        <p>sac@stokinfotelecom.com.br</p>
-                    </div>
-                </div>
-
-
-                <div class="col section-atendimento-perguntas">
-                    <h2>PERGUNTAS</h2>
-                    <p class="pergunta"><a href="#pergunta1">É preciso ter uma telefone fixo para assinar?</a></p>
-                    <p class="resposta">Não é necessário ter nenhum telefone fixo para adquirir sua Banda Larga.</p>
-
-                    <p class="pergunta"><a href="#pergunta2">Qual a diferença da Fibra Óptica para outras tecnologias?</a></p>
-                    <p class="resposta">Com a Fibra pode-se atingir uma velocidade de transmissão de dados muito maior que com outras tecnologias, como o cabo metálico ou coaxial. Além disso, a Fibra oferece maior estabilidade de sinal, não sofrendo interferências eletromagnéticas ou quedas de transmissão. Atualmente não existem outros meios físicos de transmissão com a qualidade e a capacidade de transmissão da Fibra.</p>
-
-                    <p class="pergunta"><a href="#pergunta3">Existe algum limite de download e upload?</a></p>
-                    <p class="resposta">Com nossa internet você navega ilimitado sem pagar nada a mais por isso.</p>
-
-                    <p class="pergunta"><a href="#pergunta4">A internet funciona mesmo em dias de chuva?</a></p>
-                    <p class="resposta">A Fibra óptica possui menos risco de interferências. Por isso não superaquece e não são afetados pela chuva, vento ou outros fatores ambientais. O resultado é uma conexão bem mais estável.</p>
-
-                    <p class="pergunta"><a href="#pergunta5">Onde consigo a 2 via do boleto?</a></p>
-                    <p class="resposta">Através da central de atendimento ao cliente. </p>
-
-                    <p class="pergunta"><a href="#pergunta6">Quais as formas de pagamento?</a></p>
-                    <p class="resposta">Débito em Conta ou Boleto.</p>
-                </div>
             </div>
         </div>
     </section>
@@ -165,124 +194,22 @@
     <footer>
         <div class="container">
             <ul>
-                <li><img src="assets/images/logo.png" width="150px" /></li>
                 <li><img src="assets/images/anatel.png" width="150px" /></li>
                 <li><span id="siteseal"><script async type="text/javascript" src="https://seal.godaddy.com/getSeal?sealID=J7FOqDhGIDLuBK6b9JGYSHHJY02NnkEDyqn8LwsFez6CdmduKFdv7YerloPG"></script></span></li>
-                <li>A Stok Info é um provedor de internet por Fibra Óptica, regularizado e certificado através das principais normas regulamentadora da área. Planos de Internet até 100MB para o Rio de Janeiro e Bahia. </li>
+                <li>Ligue ou chame no Whatsapp: <span class="celular"></span> <span class="telefone"></span><br /> A Stok Info é um provedor de internet por Fibra Óptica, regularizado e certificado através das principais normas regulamentadora da área. Planos de Internet para o Rio de Janeiro. </li>
             </ul>
         </div>
     </footer>
 
-    <section id="assine" class="assine">
-            <div class="container">
-                <div class="title">
-                    <h2>Ótima escolha! Agora vamos consultar a disponibilidade para o seu endereço.</h2>
-                </div>
-    
-                <form class="form-horizontal" method="POST" action="https://formspree.io/f/xwkagjew" id="assine-form">
-    
-                <div class="">
-                    <label for="nome-razao">NOME / RAZÃO SOCIAL</label>
-                    <input name="nome-razao" type="text">
-                </div>
-    
-                <div class="row">
-                    <div>
-                        <label for="cpf-cnpj">CPF / CNPJ</label>
-                        <input name="cpf-cnpj" type="text">
-                    </div>
-                    <div>
-                        <label for="cep">CEP</label>
-                        <input name="cep" type="text">
-                    </div>
-                </div>
-    
-                <div class="">
-                    <label for="endereco">ENDEREÇO</label>
-                    <input name="endereco" type="text">
-                </div>
-    
-                <div class="row">
-                    <div>
-                        <label for="numero">NÚMERO</label>
-                        <input name="numero" type="text">
-                    </div>
-                    <div>
-                        <label for="complemento">COMPLEMENTO</label>
-                        <input name="complemento" type="text">
-                    </div>
-                </div>
-    
-                <div class="row">
-                    <div>
-                        <label for="bairro">BAIRRO</label>
-                        <input name="bairro" type="text">
-                    </div>
-                    <div>
-                        <label for="cidade">CIDADE</label>
-                        <input name="cidade" type="text">
-                    </div>
-                </div>
-    
-                <div class="">
-                    <label for="email">E-MAIL</label>
-                    <input name="email" type="text">
-                </div>
-    
-                <div class="row">
-                    <div>
-                        <label for="celular">TEL. CELULAR</label>
-                        <input name="celular" type="text">
-                    </div>
-                    <div>
-                        <label for="fixo">TEL. FIXO</label>
-                        <input name="fixo" type="text">
-                    </div>
-                </div>
-    
-                <div class="">
-                    <br>
-                    <h3>Plano escolhido</h3>
-                   
-                    <input name="plano" id="planoText" type="text" style="display: none;">
-
-                    <div class="selecionado-plano1">
-                        <p>Velocidade: <span class="selecionado-plano1-velocidade"></span><br>Valor: R$ <span class="selecionado-plano1-preco"></span>,90/mês</p>
-                    </div>
-                    <div class="selecionado-plano2">
-                        <p>Velocidade: <span class="selecionado-plano2-velocidade"></span><br>Valor: R$ <span class="selecionado-plano2-preco"></span>,90/mês</p>
-                    </div>
-                    <div class="selecionado-plano3">
-                        <p>Velocidade: <span class="selecionado-plano3-velocidade"></span><br>Valor: R$ <span class="selecionado-plano3-preco"></span>,90/mês</p>
-                    </div>
-                    <div class="selecionado-plano4">
-                        <p>Velocidade: <span class="selecionado-plano4-velocidade"></span><br>Valor: R$ <span class="selecionado-plano4-preco"></span>,90/mês</p>
-                    </div>
-                    <div class="selecionado-plano5">
-                        <p>Velocidade: <span class="selecionado-plano5-velocidade"></span><br>Valor: R$ <span class="selecionado-plano5-preco"></span>,90/mês</p>
-                    </div>
-                    <div class="selecionado-plano6">
-                        <p>Velocidade: <span class="selecionado-plano6-velocidade"></span><br>Valor: R$ <span class="selecionado-plano6-preco"></span>,90/mês</p>
-                    </div>
-                </div>
-    
-                <div>
-                    <button type="submit">Enviar</button>
-                </div>
-           
-                </form>
-            </div>
-        </section>
-
 
         <div id="localizacao" class="modal">
-                <h3>Escolha uma área de cobertura</h3>
+                <h3>Área de cobertura</h3>
     
                 <div class="">
                     <select id="localizacaoOptions">
                         <option value="">Selecione:</option>
-                        <option value="rjRj">Rio de Janeiro - RJ</option>
-                        <option value="rjItatiaia">Rio de Janeiro - Itatiaia</option>
+                        <option value="rj">Rio de Janeiro - RJ</option>
+                        <option value="itatiaia">Itatiaia - RJ</option>
                     </select>
     
                     <button id="localizacaoBtn">Ok</button>
@@ -293,6 +220,7 @@
     <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.js"></script>
     <script src="assets/js/master.min.js?v07102020" type="text/javascript"></script>
+
 
 <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-132956741-1"></script>

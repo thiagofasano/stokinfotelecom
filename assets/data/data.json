@@ -1,0 +1,192 @@
+{
+    "rj": {
+        "telefone": "(21) 2482-9871",
+        "celular": "(21) 99067-3827",
+        "planos": [
+        {
+            "id": 1,
+            "velocidade": "80 MB",
+            "valor": "79",
+            "valorAntigo": "89",
+            "url": "https://api.whatsapp.com/send/?phone=5521990673827&text=Estou%20interessado%20no%20plano%20de%2080MB&app_absent=0",
+            "obs": [
+                {
+                    "icone": "check",
+                    "texto": "Sem franquia de dados"
+                },
+                {
+                    "icone": "check",
+                    "texto": "Sem fidelidade"
+                },
+                {
+                    "icone": "wifi",
+                    "texto": "Wi-Fi incluso"
+                },
+                {
+                    "icone": "suporte",
+                    "texto": "Suporte todos os dias"
+                }
+            ]
+        },
+        {
+            "id": 2,
+            "velocidade": "200 MB",
+            "valor": "99",
+            "valorAntigo": "109",
+            "url": "https://api.whatsapp.com/send/?phone=5521990673827&text=Estou%20interessado%20no%20plano%20de%20200MB&app_absent=0",
+            "obs": [
+                {
+                    "icone": "check",
+                    "texto": "Sem franquia de dados"
+                },
+                {
+                    "icone": "check",
+                    "texto": "Sem fidelidade"
+                },
+                {
+                    "icone": "wifi",
+                    "texto": "Wi-Fi incluso"
+                },
+                {
+                    "icone": "suporte",
+                    "texto": "Suporte todos os dias"
+                }
+            ]
+        },
+        {
+            "id": 3,
+            "velocidade": "250 MB",
+            "valor": "119",
+            "valorAntigo": "129",
+            "url": "https://api.whatsapp.com/send/?phone=5521990673827&text=Estou%20interessado%20no%20plano%20de%20250MB&app_absent=0",
+            "obs": [
+                {
+                    "icone": "check",
+                    "texto": "Sem franquia de dados"
+                },
+                {
+                    "icone": "check",
+                    "texto": "Sem fidelidade"
+                },
+                {
+                    "icone": "wifi",
+                    "texto": "Wi-Fi incluso"
+                },
+                {
+                    "icone": "suporte",
+                    "texto": "Suporte todos os dias"
+                }
+            ]
+        },
+        {
+            "id": 4,
+            "velocidade": "400 MB",
+            "valor": "139",
+            "valorAntigo": "149",
+            "url": "https://api.whatsapp.com/send/?phone=5521990673827&text=Estou%20interessado%20no%20plano%20de%20400MB&app_absent=0",
+            "obs": [
+                {
+                    "icone": "check",
+                    "texto": "Sem franquia de dados"
+                },
+                {
+                    "icone": "check",
+                    "texto": "Sem fidelidade"
+                },
+                {
+                    "icone": "wifi",
+                    "texto": "Wi-Fi incluso"
+                },
+                {
+                    "icone": "suporte",
+                    "texto": "Suporte todos os dias"
+                }
+            ]
+        }
+    ]
+},
+
+
+"itatiaia": {
+    "telefone": "24 3352-1377",
+    "celular": "24 98875-0090",
+    "planos": [
+        {
+            "id": 1,
+            "velocidade": "70 MB",
+            "valor": "69",
+            "valorAntigo": "79",
+            "url": "https://api.whatsapp.com/send/?phone=5524988750090&text=Estou%20interessado%20no%20plano%20de%2070MB&app_absent=0",
+            "obs": [
+                {
+                    "icone": "check",
+                    "texto": "Sem franquia de dados"
+                },
+                {
+                    "icone": "check",
+                    "texto": "Sem fidelidade"
+                },
+                {
+                    "icone": "wifi",
+                    "texto": "Wi-Fi incluso"
+                },
+                {
+                    "icone": "suporte",
+                    "texto": "Suporte todos os dias"
+                }
+            ]
+        },
+        {
+            "id": 2,
+            "velocidade": "200 MB",
+            "valor": "89",
+            "valorAntigo": "99",
+            "url": "https://api.whatsapp.com/send/?phone=5524988750090&text=Estou%20interessado%20no%20plano%20de%20200MB&app_absent=0",
+            "obs": [
+                {
+                    "icone": "check",
+                    "texto": "Sem franquia de dados"
+                },
+                {
+                    "icone": "check",
+                    "texto": "Sem fidelidade"
+                },
+                {
+                    "icone": "wifi",
+                    "texto": "Wi-Fi incluso"
+                },
+                {
+                    "icone": "suporte",
+                    "texto": "Suporte todos os dias"
+                }
+            ]
+        },
+        {
+            "id": 3,
+            "velocidade": "450 MB",
+            "valor": "99",
+            "valorAntigo": "109",
+            "url": "https://api.whatsapp.com/send/?phone=5524988750090&text=Estou%20interessado%20no%20plano%20de%20450MB&app_absent=0",
+            "obs": [
+                {
+                    "icone": "check",
+                    "texto": "Sem franquia de dados"
+                },
+                {
+                    "icone": "check",
+                    "texto": "Sem fidelidade"
+                },
+                {
+                    "icone": "wifi",
+                    "texto": "Wi-Fi incluso"
+                },
+                {
+                    "icone": "suporte",
+                    "texto": "Suporte todos os dias"
+                }
+            ]
+        }
+    ]
+
+}
+}

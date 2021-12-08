@@ -1,3 +1,14 @@
+.localizacaoAtual .container {
+    display: flex;
+    justify-content: space-between;
+    font-size: 13px;
+
+    div img {
+        vertical-align: middle;
+        margin-right: 10px;
+    }
+}
+
 .header {
 
     .row {
@@ -11,18 +22,8 @@
     }
 
     &-logo {
-        width: 65%;
-        @include break(desk){
-            width: auto;
-        }
 
-        img {
-            width: 200px;
 
-            @include break(desk){
-                width: 200px;
-            }
-        }
     }
 
     &-anatel {
@@ -83,34 +84,25 @@
 
 
 .banner {
-    background: url(../images/banner.jpg) no-repeat;
-    //background-size: cover;
-    background-attachment: fixed;
-    height: 450px;
-    text-align: center;
-    color: #fff;
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 1);
+    background-position: center!important;
+    height: 500px;
 
-    h2 {
-        padding-top: 75px;
-        font-size: 45px;
-        font-weight: 900;
+    .prev, .next {
+        position:absolute; 
+        height:60px; 
+        top: calc(50% - 60px);
 
-        @include break(desk){
-            padding-top: 150px;
-            font-size: 55px;
+        &:hover {
+            cursor: pointer;
         }
     }
 
-    h3 {
-        padding-top: 25px;
-        font-size: 25px;
-        font-weight: 500;
+    .prev {
+        left: 40px;
+    }
 
-        @include break(desk){
-            padding-top: 25px;
-            font-size: 25px;
-        }
+    .next {
+        right: 40px;
     }
 }
 
@@ -125,6 +117,12 @@
     .aviso {
         color: $silver;
         text-align: right;
+    }
+
+    .planos-obs {
+        font-size: 13px;
+        margin: 0;
+        line-height: 23px;
     }
 }
 
@@ -144,18 +142,10 @@ body.rj .section-planos .plano {
     }
 }
 
-body.bahia .section-planos .plano {
-    @include break(desk){
-        min-width: 19%;
-        max-width: 19%;
-    }
-}
 
 .section-planos .plano {
     text-align: center;
-    -webkit-box-shadow: 0px 0px 9px 0px rgba(20, 20, 20, 0.28);
-    -moz-box-shadow:    0px 0px 9px 0px rgba(20, 20, 20, 0.28);
-    box-shadow:         0px 0px 9px 0px rgba(20, 20, 20, 0.28);
+    border: 1px solid #dbdbdb;
     border-radius: 5px;    
     max-width: 100%;
     margin-bottom: 25px;
@@ -179,7 +169,7 @@ body.bahia .section-planos .plano {
         -webkit-border-top-right-radius: 5px;
         border-top-right-radius: 5px;
         color: $white;
-        font-size: 24px;
+        font-size: 34px;
     }
 
     &:hover &-title {
@@ -195,11 +185,16 @@ body.bahia .section-planos .plano {
         margin-top: 20px;
     }
 
+    .preco-antigo {
+        text-decoration: line-through;
+        color: #999;
+    }
+
     &-price {
         display: flex;
         flex-flow: row;
         justify-content: center;
-        margin: 0 35px 25px 40px;
+        margin: 0 15px 25px 15px;
 
         h3 {
             font-size: 50px;
@@ -230,6 +225,21 @@ body.bahia .section-planos .plano {
                 margin: 20px 0 -20px 0;
             }
         }
+
+        ul {
+            font-size: 13px;
+            margin-bottom: 30px;
+
+            li {
+                border-bottom: 1px solid #efefef;
+                padding-bottom: 10px;
+
+                img {
+                    vertical-align: middle;
+                    margin-right: 5px;
+                }
+            }
+        }
     }
 
 }
@@ -242,22 +252,99 @@ body.bahia .section-planos .plano {
 
 .section-sobre {
     background: $silver-light;
-    padding: 20px 0 60px 0;
-    text-align: center;
+    padding: 20px 0 100px 0;
 
     @include break(desk){
         text-align: left;
     }
 
+    .container {
+        text-align: center;
+    }
+
+    h1 {
+        color: #053388;
+        margin-top: 50px;
+        font-size: 40px;
+    }
+
+    img {
+        margin-bottom: 25px;
+        -webkit-animation: action 1s infinite  alternate;
+        animation: action 1s infinite  alternate;
+        
+        @-webkit-keyframes action {
+            0% { transform: translateY(0); }
+            100% { transform: translateY(-10px); }
+        }
+        
+        @keyframes action {
+            0% { transform: translateY(0); }
+            100% { transform: translateY(-10px); }
+        }
+        
+    }
+
     .title {
-        margin: 25px 0;
+        margin:  0;
+    }
+
+    .diferenciais {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 50px;
+
+        div {
+            background-color: #fff;
+            padding: 20px;
+            width: 24%;
+            margin-right: 1%;
+            height: 300px;
+            position: relative;
+
+
+            h2 {
+                position: absolute;
+                bottom: 25px;
+                color: #fff;
+                font-weight: bold;
+                font-size: 26px;
+                padding-right: 7%;
+
+                small {
+                    display: block;
+                    font-size: 18px;
+                    font-weight: normal;
+                    margin-top: 10px;
+                }
+            }
+        }
+
+        .bgsuporte {
+            background: url(../images/bgsuporte.jpg) no-repeat;
+            
+        }
+
+        .bgestabilidade {
+            background: url(../images/bgestabilidade.jpg) no-repeat;
+        }
+
+        .bgcentral {
+            background: url(../images/bgcentral.jpg) no-repeat;
+        }
+
+        .bgwifi {
+            background: url(../images/bgwifi.jpg) no-repeat;
+        }
     }
 
     @include break(desk){
         .title {
-            margin: 30px 0;
+            margin-top: -25px;
         }
     }
+
+
 }
 
 
@@ -272,21 +359,20 @@ body.bahia .section-planos .plano {
     .row {
 
         @include break(desk){
-        height: 300px;
+        height: 500px;
         }
 
-        height: 400px;;
+        height: 400px;
         align-items: center;
     }
 
     margin-top: -10px;
     color: $white;
-    background: rgb(0, 76, 174);
-    background: -moz-linear-gradient(56deg, rgb(0, 76, 174) 20%, rgb(0, 234, 255) 100%);
-    background: -webkit-linear-gradient(56deg, rgb(0, 76, 174) 20%, rgb(0, 234, 255) 100%);
-    background: -o-linear-gradient(56deg, rgb(0, 76, 174) 20%, rgb(0, 234, 255) 100%);
-    background: -ms-linear-gradient(56deg, rgb(0, 76, 174) 20%, rgb(0, 234, 255) 100%);
-    background: linear-gradient(146deg, rgb(0, 76, 174) 20%, rgb(0, 234, 255) 100%);
+
+
+    background: rgb(31,177,97);
+background: linear-gradient(0deg, rgba(31,177,97,1) 0%, rgba(11,199,96,1) 47%, rgba(27,173,93,1) 100%);
+
 
     &-medalha {
         max-width: 30%;
@@ -294,7 +380,6 @@ body.bahia .section-planos .plano {
 
         img {
             max-width: 60%;
-            margin-top: -50px;
         }
     }
 
@@ -309,14 +394,18 @@ body.bahia .section-planos .plano {
 
 
 .section-atendimento {
-    padding-bottom: 50px;
-
-    @include break(desk){
-        text-align: center;
-    }
+    padding: 50px 0;
+    color: #fff;
+    background: rgb(0, 76, 174);
+    background: -moz-linear-gradient(56deg, rgb(0, 76, 174) 20%, rgb(0, 234, 255) 100%);
+    background: -webkit-linear-gradient(56deg, rgb(0, 76, 174) 20%, rgb(0, 234, 255) 100%);
+    background: -o-linear-gradient(56deg, rgb(0, 76, 174) 20%, rgb(0, 234, 255) 100%);
+    background: -ms-linear-gradient(56deg, rgb(0, 76, 174) 20%, rgb(0, 234, 255) 100%);
+    background: linear-gradient(146deg, rgb(0, 76, 174) 20%, rgb(0, 234, 255) 100%);
 
     .row {
         flex-direction: column;
+        justify-content: space-around;
     }
 
     @include break(desk){
@@ -325,88 +414,60 @@ body.bahia .section-planos .plano {
         }
     }
 
-    &-numeros {
-        width: 100%;
-        margin-top: 25px;
-
-        @include break(desk){
-            width: 45%;
-        }
-
-        a {
-            color: $white;
-        }
-
-        small {
-            font-size: 14px;
-            display: block;
-            font-weight: 300;
-        }
-    }
-    
-    &-perguntas {
-        width: 100%;
-        margin-top: 25px;
-
-        @include break(desk){
-            width: 55%;
-        }
+    .title p {
+        text-transform: none
     }
 
-    &-numeros {
-        @include break(desk){
-            padding-right: 40px;
-            color: $white!important;
-        }
-    }
-
-    &-numeros div {
-        border-radius: 4px;
-        padding: 10px;
-        margin-bottom: 30px;
-        color: $white;
-        background: rgb(0, 76, 174);
-        background: -moz-linear-gradient(56deg, rgb(0, 76, 174) 20%, rgb(0, 234, 255) 100%);
-        background: -webkit-linear-gradient(56deg, rgb(0, 76, 174) 20%, rgb(0, 234, 255) 100%);
-        background: -o-linear-gradient(56deg, rgb(0, 76, 174) 20%, rgb(0, 234, 255) 100%);
-        background: -ms-linear-gradient(56deg, rgb(0, 76, 174) 20%, rgb(0, 234, 255) 100%);
-        background: linear-gradient(146deg, rgb(0, 76, 174) 20%, rgb(0, 234, 255) 100%);
-        -webkit-box-shadow: 5px 5px 0px 0px rgba(219,219,219,1);
-        -moz-box-shadow: 5px 5px 0px 0px rgba(219,219,219,1);
-        box-shadow: 5px 5px 0px 0px rgba(219,219,219,1);
-        text-align: center;
-
-        &:hover {
-            background: rgb(0, 76, 174);
-            background: -moz-linear-gradient(112deg, rgb(0, 76, 174) 20%, rgb(0, 234, 255) 100%);
-            background: -webkit-linear-gradient(112deg, rgb(0, 76, 174) 20%, rgb(0, 234, 255) 100%);
-            background: -o-linear-gradient(112deg, rgb(0, 76, 174) 20%, rgb(0, 234, 255) 100%);
-            background: -ms-linear-gradient(112deg, rgb(0, 76, 174) 20%, rgb(0, 234, 255) 100%);
-            background: linear-gradient(112deg, rgb(0, 76, 174) 20%, rgb(0, 234, 255) 100%);
-        }
+    .numeros {
+        margin: 25px 0;
+        text-align: left;
 
         h2 {
-            font-size: 16px;
-            margin-bottom: 10px;
+            margin-top: 20px;
         }
+                    
+        img {
+            vertical-align: middle;
+            margin-right: 10px;
+        }
+        
 
-        h3 {
-            font-size: 28px;
-        }
+    }
+
+    
+
+
+
+
+ 
+}
+
+#perguntas {
+    background: #F5F5F5;
+    padding: 50px 0;
+    text-align: center;
+
+    h2 {
+        margin-bottom: 50px;;
+    }
+}
+
+.perguntas-e-respostas {
+    width: 70%;
+    margin: 0 auto;
+    padding: 25px;
+    background: #fff;
+    border-radius: 10px;
+    -webkit-box-shadow: 5px 5px 0px 0px rgba(219,219,219,1);
+    -moz-box-shadow: 5px 5px 0px 0px rgba(219,219,219,1);
+    box-shadow: 5px 5px 0px 0px rgba(219,219,219,1);
+
+    .resposta  {
+        font-size: 85%;
     }
 
     .perguntaAtiva {
-        border: 1px solid $silver;
-        background-color: $silver-light;
-        border-bottom: none;
-        font-weight: bold
-    }
-
-    .respostaAtiva {
-        border: 1px solid $silver;
-        border-top: none!important;
-        padding: 15px 10px;
-        margin-top: -12px;
+        font-weight: bold;
     }
 }
 
@@ -414,119 +475,7 @@ body.bahia .section-planos .plano {
 
 
 
-.fade:before{
-    content:"→";
-    position:absolute;
-    color:#383736;
-    left: 88%;
-    opacity: 0;
-    -webkit-transition: all 0.2s ease-in;
-  }
-  
-  .fade:hover:before{
-    left:91%;
-    opacity:1;
-  }
-  
-  .fade:hover {
-    border: 0px #fff solid;
-    -webkit-transform: scale(1.04,1.04);
-    -webkit-transition: border 0.3s ease-out;
-    -webkit-transition: transform 250ms cubic-bezier(0.680, -0.550, 0.265, 1.550); 
-  }
-  
-  .arrow{
-    text-align:left;
-    padding-left:17px;
-  }
-  
-  .arrow:before{
-    content:"→";
-    position:absolute;
-    color:#383736;
-    left: 83%;
-    opacity: 0;
-    -webkit-transition: all 250ms cubic-bezier(0.680, -0.550, 0.265, 1.550); 
-  }
-  
-  .arrow:hover:before{
-    left:84%;
-    opacity:1;
-  }
-  
-  .arrow:hover {
-    width:170px;
-  }
-  
-  
-  .slide:after{
-    content:"Assine Já";
-    position:absolute;
-    width:100%;
-    height:100%;
-    left:0;
-    text-align:center;
-    -webkit-transition: all 400ms cubic-bezier(0.680, -0.550, 0.265, 1.550); 
-  }
-  
-  .slide:before {
-    content:"Aproveite →";
-    height:100%;
-    width:100%;
-    position:absolute;
-    color:#65a93c;
-    left:-100%;
-    opacity: 0;
-    padding-top: 2px;
-    -webkit-transition: all 500ms cubic-bezier(0.680, -0.550, 0.265, 1.550); 
-  }
-  
-  @include break(desk){
-    .slide:hover:before{
-        left:0;
-        opacity:1;
-    }
-    .slide:hover:after{
-        left:100%;
-        opacity:0;
-    }
-    
-    .slide.left:hover{
-        background:none;
-    }
-}
-  
-  .slide.left:before {
-    left:100%;
-    color:#65a93c;
-    -webkit-transition: all 425ms cubic-bezier(0.680, -0.550, 0.265, 1.550); 
-  }
-  
-  .slide.left:hover:before{
-    left:0;
-  }
-.btn {
-  position: relative;
-  display:block;
-  min-height: 35px;
-  width: 90%;
-  margin: 10px 7px;
-  padding: 8px 5px;
-  @include break(desk){
-    padding: 5px 5px;
-  }
-  font-weight: 700;
-  font-size: 15px;
-  letter-spacing: 2px;
-  border-radius: 4px;
-  text-transform: uppercase;
-  outline: 0;
-  overflow:hidden;
-  z-index: 1;
-  cursor: pointer;
-  transition:         0.08s ease-in;
-  -o-transition:      0.08s ease-in;
-  -ms-transition:     0.08s ease-in;
-  -moz-transition:    0.08s ease-in;
-  -webkit-transition: 0.08s ease-in;
+
+select{
+    padding: 10px;
 }
