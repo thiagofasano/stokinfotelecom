@@ -7,9 +7,31 @@ const sectionPlanos = document.querySelector("#planos .row");
 const telefone = document.querySelectorAll(".telefone");
 const celular = document.querySelectorAll(".celular");
 
+const formAjuda = document.querySelector("#form-ajuda");
+const inputNome = document.querySelector("#input-nome");
+const inputTelefone = document.querySelector("#input-telefone");
+const submitFormAjuda = document.querySelector("#submit-form-ajuda");
+
 let planos;
 
 $(document).ready(function () {
+  function enviaFormAjuda(event) {
+    event.preventDefault();
+
+    let formData = { name: inputNome, telefone: inputTelefone };
+
+    $.ajax({
+      type: "post",
+      url: "../../mail.php",
+      data: formData,
+      success: function (html) {
+        $("#feedback").html(html);
+      },
+    });
+  }
+
+  submitFormAjuda.addEventListener("click", (event) => enviaFormAjuda(event));
+
   const next = document.querySelector("#next");
   const prev = document.querySelector("#prev");
   const slideArray = [];
