@@ -18,11 +18,11 @@ $(document).ready(function () {
   function enviaFormAjuda(event) {
     event.preventDefault();
 
-    let formData = { name: inputNome, telefone: inputTelefone };
+    let formData = { name: inputNome.value, telefone: inputTelefone.value };
 
     $.ajax({
       type: "post",
-      url: "../../mail.php",
+      url: "mail.php",
       data: formData,
       success: function (html) {
         $("#feedback").html(html);
