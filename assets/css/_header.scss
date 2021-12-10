@@ -69,6 +69,21 @@ header {
                     display: none;
                 }
               }
+
+              #central-mobile {
+                position: relative;
+                margin-bottom: 10px;
+                padding-left: 1.25em;
+                display: block;
+                background: url(../images/suporte-branco.png) no-repeat 10px 10px #2067CA;
+                padding: 10px;
+                text-align: center;
+                color: #fff;
+
+                @include break(desk){
+                    display: none;
+                }
+              }
             
             #menu-mobile:before {
                 content: "";
@@ -125,9 +140,11 @@ header {
                             text-align: center;
                             color: #fff!important;
                             margin: 0 auto;
+                            display: none;
 
                             @include break(desk){
                                 margin: auto;
+                                display: initial;
                             }
                         }
                     }

@@ -7,6 +7,8 @@ const sectionPlanos = document.querySelector("#planos .row");
 const telefone = document.querySelectorAll(".telefone");
 const celular = document.querySelectorAll(".celular");
 const centralCliente = document.querySelector(".central-cliente");
+const centralClienteMobile = document.querySelector("#central-mobile");
+
 const centralClienteAcesseAgora = document.querySelector(
   ".central-acesse-agora"
 );
@@ -186,6 +188,11 @@ $(document).ready(function () {
       .then((response) => response.json())
       .then((data) => {
         centralCliente.setAttribute(
+          "href",
+          data[localizacaoOptions.value].central
+        );
+
+        centralClienteMobile.setAttribute(
           "href",
           data[localizacaoOptions.value].central
         );

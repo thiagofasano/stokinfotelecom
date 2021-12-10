@@ -41,8 +41,8 @@ try {
     $mail->Password   = "";
 
     //Recipients
-    $mail->setFrom("contato@stokinfotelecom.com.br", "Site STOK INFO");
-    $mail->addAddress('thiagofasano@gmail.com', 'Thiago Fasano');     // Add a recipient
+    $mail->setFrom("naoresponda@stokinfotelecom.com.br", "Site STOK INFO");
+    $mail->addAddress('igorcruz@stokinfotelecom.com.br', 'Igor Cruz');     // Add a recipient
 
 
     //Content
