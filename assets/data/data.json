@@ -2,6 +2,8 @@
     "rj": {
         "telefone": "(21) 2482-9871",
         "celular": "(21) 99067-3827",
+        "central": "https://penha.stokfibras.gerenet.com.br/sac2/",
+        "obs": "",
         "planos": [
         {
             "id": 1,
@@ -80,7 +82,7 @@
         },
         {
             "id": 4,
-            "velocidade": "400 MB",
+            "velocidade": "450 MB",
             "valor": "139",
             "valorAntigo": "149",
             "url": "https://api.whatsapp.com/send/?phone=5521990673827&text=Estou%20interessado%20no%20plano%20de%20400MB&app_absent=0",
@@ -108,8 +110,10 @@
 
 
 "itatiaia": {
-    "telefone": "24 3352-1377",
-    "celular": "24 98875-0090",
+    "telefone": "(24) 3352-1377",
+    "celular": "(24) 98875-0090",
+    "central": "https://itatiaia.stokfibras.gerenet.com.br/sac2/",
+    "obs": "* Valores já com desconto de R$ 10,00 para pagamento até a data de vencimento.",
     "planos": [
         {
             "id": 1,

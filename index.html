@@ -1,54 +1,70 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no" />
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>STOK INFO TELECOM - Internet por Fibra Óptica de alto desempenho </title>
     <link rel="preload" href="assets/images/banner.jpg" as="image">
     <link rel="preload" href="assets/images/banner2.jpg" as="image">
 
-    <meta name="description" content="STOK INFO TELECOM - Internet por Fibra Óptica de alto desempenho no RJ IPASE, ITAIAIA E BAHIA">
-    <meta name="keywords" content="StokInfo, Stok Info, Internet, Banda Larga, Internet Fibra Óptica, Internet rápida, Internet Ipase, Internet Itaiaia, Internet Bahia, Banda Larga IPASE, Banda Larga Itaiaia, Banda Larga Bahia Provedor de Internet">
+    <meta name="description"
+        content="STOK INFO TELECOM - Internet por Fibra Óptica de alto desempenho no RJ IPASE, ITAIAIA E BAHIA">
+    <meta name="keywords"
+        content="StokInfo, Stok Info, Internet, Banda Larga, Internet Fibra Óptica, Internet rápida, Internet Ipase, Internet Itaiaia, Internet Bahia, Banda Larga IPASE, Banda Larga Itaiaia, Banda Larga Bahia Provedor de Internet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;400;600;800&display=swap" rel="stylesheet">    <link rel="stylesheet" href="assets/css/master.min.css?v2">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;400;600;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/master.min.css?v2">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.css" />
 </head>
+
 <body>
 
-    <div class="localizacaoAtual">
-        <div class="container">
-            <div><img src="assets/images/whatapp.png" />Ligue ou chame no Whatsapp: <span class="celular"></span> <span class="telefone"></span></div>
-        <div><span class="localidade"></span> <a href="#localizacao" data-modal="#localizacao">Alterar</a></div>
-        </div>
-    </div>
+    <header>
 
-    <header class="header">
-        <div class="container">
-            <div class="row">
-                <div class="column header-logo"><a href="#"><img src="assets/images/logo.png" alt="STOK INFO Telecom"></a></div>
-
-
-                <div class="column header-menu">
-                    <ul class="">
-                        <li><a href="#planos">Planos</a></li>
-                        <li><a href="#sobre">Sobre Nós</a></li>
-                        <li><a href="#atendimento">Fale  Conosco</a></li>
-                        <li><a href="#central" class="central-cliente">Central do Cliente</a></li>
-                    </ul>
+        <div class="localizacaoAtual">
+            <div class="container">
+                <div>
+                    <img src="assets/images/whatapp.png" />
+                    Ligue ou chame no Whatsapp: <span class="celular"></span> <span class="telefone"></span>
                 </div>
-
+                <div>
+                    <span class="localidade"></span> 
+                    <a href="#localizacao" data-modal="#localizacao">Alterar</a>
+                </div>
             </div>
         </div>
 
-        <div class="banner">
-            <div class="slide" data-background="assets/images/banner.jpg"></div>
-            <div class="slide" data-background="assets/images/banner2.jpg"></div>
-            <a id="prev" class="control prev"><img src="assets/images/arrow-left.png"></a>
-            <a id="next" class="control next"><img src="assets/images/arrow-right.png"></a>
+        <div class="container">
+            <div class="row">
+                <div class="logo"><a href="#"><img src="assets/images/logo.png" alt="STOK INFO Telecom"></a></div>
+                <nav>
+                    <a href="#" id="menu-mobile">Menu</a>
+
+                    <ul>
+                        <li><a href="#planos" class="scroll">Planos</a></li>
+                        <li><a href="#sobre" class="scroll">Sobre Nós</a></li>
+                        <li><a href="#perguntas" class="scroll">Fale Conosco</a></li>
+                        <li><a href="#trabalhe" class="scroll">Trabalhe Conosco</a></li>
+                        <li><a href="" target="_blank" class="central-cliente">Central do Cliente</a></li>
+                    </ul>
+                </nav>
+
+            </div>
         </div>
     </header>
+
+    <section id="banner">
+        <div class="slide" data-background="assets/images/banner.jpg"></div>
+        <div class="slide" data-background="assets/images/banner2.jpg"></div>
+        
+        <a id="prev" class="control prev"><img src="assets/images/arrow-left.png"></a>
+        <a id="next" class="control next"><img src="assets/images/arrow-right.png"></a>
+    </section>
 
     <section id="planos" class="section section-planos">
         <div class="container">
@@ -63,12 +79,14 @@
             <div class="row planos-ajuda">
                 <h2>Quer ajuda para escolher o melhor plano? Nós ligamos para você!</h2>
                 <form id="form-ajuda">
-                    <input id="input-nome" name="nome" type="text" placeholder="Nome">
-                    <input id="input-telefone"name="telefone" type="text" placeholder="DDD + Telefone">
-                    <input id="submit-form-ajuda" type="submit" value="Enviar" class="btn btn-primary">
+                    <input id="input-ajuda-nome" type="text" placeholder="Nome">
+                    <input id="input-ajuda-telefone" type="text" placeholder="DDD + Telefone">
+                    <button id="submit-form-ajuda" type="submit" class="btn btn-primary">Enviar</button>
                 </form>
+                <div class="feedback feedback-ajuda"></div>
             </div>
 
+            <p class="planos-obs obs-localidade"></p>
             <p class="planos-obs">* Taxa de instalação não inclusa.</small></p>
             <p class="planos-obs">* Consulte disponbilidade para sua localidade.</p>
 
@@ -79,16 +97,17 @@
         <div class="container">
 
 
-            <div style="display: flex; align-items: center;">
-                <img src="assets//images/globo.png"/>
-                <div class="circle-animate"></div>
+            <div class="sobre-globo">
+                <img src="assets//images/globo.png" />
                 <div class="title">
                     <h2>STOK INFO TELECOM</h2>
                     <h1>Conectamos você com velocidade e estabilidade.</h1>
                 </div>
-        </div>
+            </div>
 
-            <p>Somos uma empresa legalizada e homologada pela ANATEL (Agência Nacional de Telecomunicação). </p><p>Prestamos serviços de internet banda larga de altíssimo desempenho, oferecendo ao nosso consumidor o que há de mais avançado em conectividade através de fibra óptica. </p>
+            <p>Somos uma empresa legalizada e homologada pela ANATEL (Agência Nacional de Telecomunicação). </p>
+            <p>Prestamos serviços de internet banda larga de altíssimo desempenho, oferecendo ao nosso consumidor o que
+                há de mais avançado em conectividade através de fibra óptica. </p>
 
             <div class="diferenciais">
 
@@ -129,55 +148,61 @@
                 <div class="column section-certificacoes-medalha">
                     <img src="assets/images/medalha.png" alt="">
                 </div>
-                
+
                 <div class="column section-certificacoes-texto">
-                <p><strong>NOSSAS CERTIFICAÇÕES</strong></p>
-                <p>A Stok Info é um provedor regularizado e certificado através das principais normas regulamentadora da área, que asseguram mais segurança e qualidade.</p>
-                
-                <div style="display: flex; justify-content: space-between; margin-top: 25PX;">
-                <img src="assets/images/certificado-anatel.png" />
-                <img src="assets/images/crea.png" />
-                <img src="assets/images/rn10.png" />
-                <img src="assets/images/rn35.png" />
-            </div>
-                <!-- <p>RN10, RN35, Anatel e CREA.</p> -->
+                    <p><strong>NOSSAS CERTIFICAÇÕES</strong></p>
+                    <p>A Stok Info é um provedor regularizado e certificado através das principais normas
+                        regulamentadora da área, que asseguram mais segurança e qualidade.</p>
+
+                    <div class="certificacoes-icones">
+                        <img src="assets/images/certificado-anatel.png" />
+                        <img src="assets/images/crea.png" />
+                        <img src="assets/images/rn10.png" />
+                        <img src="assets/images/rn35.png" />
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-
-
     <section id="perguntas" class="section">
 
-<div class="container">
+        <div class="container">
 
-    <h2>DÚVIDAS FREQUENTES</h2>
+            <h2>DÚVIDAS FREQUENTES</h2>
 
 
-        <div class="perguntas-e-respostas">
-            <p class="pergunta"><a href="#pergunta1">Como faço para assinar?</a></p>
-            <p class="resposta">Não é necessário ter nenhum telefone fixo para adquirir sua Banda Larga.</p>
+            <div class="perguntas-e-respostas">
+                <p class="pergunta"><a href="#pergunta1">Como faço para assinar?</a></p>
+                <p class="resposta">É rápido e sem burocracia. Ligue para um dos nossos números ou chame-nos no
+                    whatsapp.</p>
 
-            <p class="pergunta"><a href="#pergunta1">É preciso ter um telefone fixo para assinar?</a></p>
-            <p class="resposta">Não é necessário ter nenhum telefone fixo para adquirir sua Banda Larga.</p>
+                <p class="pergunta"><a href="#pergunta1">É preciso ter um telefone fixo para assinar?</a></p>
+                <p class="resposta">Não é necessário ter nenhum telefone fixo para adquirir sua Banda Larga.</p>
 
-            <p class="pergunta"><a href="#pergunta2">Qual a diferença da Fibra Óptica para outras tecnologias?</a></p>
-            <p class="resposta">Com a Fibra pode-se atingir uma velocidade de transmissão de dados muito maior que com outras tecnologias, como o cabo metálico ou coaxial. Além disso, a Fibra oferece maior estabilidade de sinal, não sofrendo interferências eletromagnéticas ou quedas de transmissão. Atualmente não existem outros meios físicos de transmissão com a qualidade e a capacidade de transmissão da Fibra.</p>
+                <p class="pergunta"><a href="#pergunta2">Qual a diferença da Fibra Óptica para outras tecnologias?</a>
+                </p>
+                <p class="resposta">Com a Fibra pode-se atingir uma velocidade de transmissão de dados muito maior que
+                    com outras tecnologias, como o cabo metálico ou coaxial. Além disso, a Fibra oferece maior
+                    estabilidade de sinal, não sofrendo interferências eletromagnéticas ou quedas de transmissão.
+                    Atualmente não existem outros meios físicos de transmissão com a qualidade e a capacidade de
+                    transmissão da Fibra.</p>
 
-            <p class="pergunta"><a href="#pergunta3">Existe algum limite de download e upload?</a></p>
-            <p class="resposta">Com nossa internet você navega ilimitado sem pagar nada a mais por isso.</p>
+                <p class="pergunta"><a href="#pergunta3">Existe algum limite de download e upload?</a></p>
+                <p class="resposta">Com nossa internet você navega ilimitado sem pagar nada a mais por isso.</p>
 
-            <p class="pergunta"><a href="#pergunta4">A internet funciona mesmo em dias de chuva?</a></p>
-            <p class="resposta">A Fibra óptica possui menos risco de interferências. Por isso não superaquece e não são afetados pela chuva, vento ou outros fatores ambientais. O resultado é uma conexão bem mais estável.</p>
+                <p class="pergunta"><a href="#pergunta4">A internet funciona mesmo em dias de chuva?</a></p>
+                <p class="resposta">A Fibra óptica possui menos risco de interferências. Por isso não superaquece e não
+                    são afetados pela chuva, vento ou outros fatores ambientais. O resultado é uma conexão bem mais
+                    estável.</p>
 
-            <p class="pergunta"><a href="#pergunta5">Onde consigo a 2 via do boleto?</a></p>
-            <p class="resposta">Através da central de atendimento ao cliente. </p>
+                <p class="pergunta"><a href="#pergunta5">Onde consigo a 2 via do boleto?</a></p>
+                <p class="resposta">Através da central de atendimento ao cliente. </p>
 
-            <p class="pergunta"><a href="#pergunta6">Quais as formas de pagamento?</a></p>
-            <p class="resposta">Débito em Conta ou Boleto.</p>
+                <p class="pergunta"><a href="#pergunta6">Quais as formas de pagamento?</a></p>
+                <p class="resposta">Débito em Conta ou Boleto.</p>
+            </div>
         </div>
-    </div>
 
     </section>
 
@@ -186,18 +211,17 @@
 
             <div class="row">
 
+                <div class="title">
+                    <h2>Fale Conosco</h2>
+                    <p>Segunda à Sexta de 9h às 19h.</p>
+                    <p>Sábado de 9h às 17h.</p>
+                    <p>Domingo de 9h às 13h.</p>
+                </div>
 
-                    <div class="title">
-                        <h2>Fale Conosco</h2>
-                        <p>Segunda a Domingo de 9h às 18h.</p>
-                        <p></p>
-                    </div>
-
-
-                    <div class="numeros">
-                        <h2><img src="assets/images/whatapp.png"><span class="celular"></span></h2>
-                        <h2><img src="assets/images/telefone.png"><span class="telefone"></span></h2>
-                    </div>
+                <div class="numeros">
+                    <h2><img src="assets/images/whatapp.png"><span class="celular"></span></h2>
+                    <h2><img src="assets/images/telefone.png"><span class="telefone"></span></h2>
+                </div>
 
             </div>
         </div>
@@ -209,37 +233,57 @@
 
             <div class="row">
 
+                <div class="title">
+                    <h2>Trabalhe Conosco</h2>
+                    <p>Buscamos pessoas que deseja cumprir nosso propósito de melhorar a vida das pessoas através da
+                        tecnologia.</p>
+                    <img src="assets/images/trabalhe.png" />
+                </div>
 
-                    <div class="title">
-                        <h2>Trabalhe Conosco</h2>
-                        <p>buscamos pessoas que deseja cumprir nosso propósito de melhorar a vida das pessoas através da tecnologia.</p>
-                    </div>
+                <div class="form">
+                    <form id="form-trabalhe">
 
+                        <input type="text" id="input-trabalhe-nome" placeholder="Nome">
 
-                    <div class="email">
-                        <form   action="https://formspree.io/f/xwkagjew"
-                        method="POST"
-                        enctype="multipart/form-data">
+                        <div class="col">
+                            <input type="text" id="input-trabalhe-email" placeholder="E-mail" class="margin-right">
+                            <input type="text" id="input-trabalhe-celular" placeholder="Celular">
+                        </div>
 
-                            <input type="text" name="nome" placeholder="Nome">
-                            
+                        <div class="col">
+                            <input type="text" id="input-trabalhe-idade" placeholder="Idade" class="margin-right">
+                            <input type="text" id="input-trabalhe-estadoCivil" placeholder="Estado Civil">
+                        </div>
 
-                            <select name="area">
-                                <option value="" disabled selected>Área de Interesse</option>
-                                <option value="Atendimento">Atendimento</option>
-                                <option value="Comercial">Comercial</option>
-                                <option value="Engenharia">Engenharia</option>
-                                <option value="Escritório">Escritório</option>
-                                <option value="Recursos Humanos">Recursos Humanos</option>
-                                <option value="Suporte técnico">Suporte técnico</option>
-                                <option value="Técnico">Técnico</option>
-                            </select>  
-                            
-                            <input type="file" name="upload" placeholder="Currículo">
-                            
-                            <input type="submit" value="Enviar" class="btn btn-primary">
-                        </form>
-                    </div>
+                        <div class="col">
+                            <input type="text" id="input-trabalhe-endereco" placeholder="Endereço" class="margin-right">
+                            <input type="text" id="input-trabalhe-bairro" placeholder="Bairro">
+                        </div>
+
+                        <div class="col">
+                            <input type="text" id="input-trabalhe-cidade" placeholder="Cidade" class="margin-right">
+                            <input type="text" id="input-trabalhe-uf" placeholder="UF">
+                        </div>
+
+                        <textarea id="input-trabalhe-formacao" placeholder="Formação Acadêmica"></textarea>
+                        <textarea id="input-trabalhe-experiencia" placeholder="Experiência Profissional"></textarea>
+
+                        <select name="area" id="input-trabalhe-area">
+                            <option value="" disabled selected>Área de Interesse</option>
+                            <option value="Atendimento">Atendimento</option>
+                            <option value="Comercial">Comercial</option>
+                            <option value="Engenharia">Engenharia</option>
+                            <option value="Escritório">Escritório</option>
+                            <option value="Recursos Humanos">Recursos Humanos</option>
+                            <option value="Suporte técnico">Suporte técnico</option>
+                            <option value="Técnico">Técnico</option>
+                        </select>
+
+                        <button id="submit-form-trabalhe" type="submit" class="btn btn-primary">Enviar</button>
+
+                        <div class="feedback feedback-trabalhe"></div>
+                    </form>
+                </div>
 
             </div>
         </div>
@@ -249,53 +293,62 @@
         <div class="container">
             <ul>
                 <li><img src="assets/images/anatel.png" width="150px" /></li>
-                <li><span id="siteseal"><script async type="text/javascript" src="https://seal.godaddy.com/getSeal?sealID=J7FOqDhGIDLuBK6b9JGYSHHJY02NnkEDyqn8LwsFez6CdmduKFdv7YerloPG"></script></span></li>
-                <li>A Stok Info é um provedor de internet por Fibra Óptica, regularizado e certificado através das principais normas regulamentadora da área. Planos de Internet para o Rio de Janeiro. <br /><br /> R. Sd. Servino Mengarda, 61 - Vila Cosmos, Rio de Janeiro - RJ, CEP 21210-840.</li>
+                <li><span id="siteseal">
+                        <script async type="text/javascript"
+                            src="https://seal.godaddy.com/getSeal?sealID=J7FOqDhGIDLuBK6b9JGYSHHJY02NnkEDyqn8LwsFez6CdmduKFdv7YerloPG"></script>
+                    </span></li>
+                <li>A Stok Info é um provedor de internet por Fibra Óptica, regularizado e certificado através das
+                    principais normas regulamentadora da área. Planos de Internet para o Rio de Janeiro. <br /><br /> R.
+                    Sd. Servino Mengarda, 61 - Vila Cosmos, Rio de Janeiro - RJ, CEP 21210-840.</li>
             </ul>
         </div>
 
         <div class="endereco">
             <div class="container">
-                
-            </div>  
+
+            </div>
         </div>
     </footer>
 
 
-        <div id="localizacao" class="modal">
-                <h3>Área de cobertura</h3>
-    
-                <div class="">
-                    <select id="localizacaoOptions">
-                        <option value="">Selecione:</option>
-                        <option value="rj">Rio de Janeiro - RJ</option>
-                        <option value="itatiaia">Itatiaia - RJ</option>
-                    </select>
-    
-                    <button id="localizacaoBtn">Ok</button>
-                </div>
-            </div>
-    
+    <div id="localizacao" class="modal">
+        <h3>Área de cobertura</h3>
+
+        <div class="">
+            <select id="localizacaoOptions">
+                <option value="">Selecione:</option>
+                <option value="rj">Rio de Janeiro - RJ</option>
+                <option value="itatiaia">Itatiaia - RJ</option>
+            </select>
+
+            <div class="feedback feedback-localidade hide"></div>
+
+            <button id="localizacaoBtn">Ok</button>
+
+        </div>
+    </div>
+
 
     <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.js"></script>
     <script src="assets/js/master.min.js?v2" type="text/javascript"></script>
 
 
-<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-132956741-1"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-132956741-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
 
-  gtag('config', 'UA-132956741-1');
-</script>
+        gtag('config', 'UA-132956741-1');
+    </script>
 
-<script>
-    window._digisac = { id: "273c3396-8f2b-4c46-885f-7fdfaf550eb2" };
-  </script>
-  <script src="https://webchat.digisac.app/embedded.js"></script>
-  
+    <script>
+        window._digisac = { id: "273c3396-8f2b-4c46-885f-7fdfaf550eb2" };
+    </script>
+    <script src="https://webchat.digisac.app/embedded.js"></script>
+
 </body>
+
 </html>

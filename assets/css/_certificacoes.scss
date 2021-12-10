@@ -1,0 +1,68 @@
+.section-certificacoes {
+    text-align: center;
+
+    @include break(desk){
+        text-align: center;
+    }
+
+    .row {
+        flex-direction: column;
+
+        @include break(desk){
+            height: 500px;
+            flex-direction: row;
+        }
+
+        height: 650px;
+        align-items: center;
+    }
+
+    margin-top: -10px;
+    color: $white;
+    background: rgb(31,177,97);
+    background: linear-gradient(0deg, rgba(31,177,97,1) 0%, rgba(11,199,96,1) 47%, rgba(27,173,93,1) 100%);
+
+    &-medalha {
+        max-width: 30%;
+        text-align: center;
+
+        img {
+            max-width: 80%;
+            margin-top: 25px;
+            
+        @include break(desk){
+            margin-top: 0;
+            max-width: 60%;
+        }
+        }
+    }
+
+    &-texto {
+        width: 100%;
+
+        @include break(desk){
+            width: 70%;
+        }
+
+        strong {
+            font-size: 1.5em;
+        }
+    }
+
+    .certificacoes-icones {
+        display: flex; 
+        justify-content: space-between; 
+        margin-top: 25px;
+
+        img {
+            width: 80px;
+        }  
+
+        @include break(desk){
+            img {
+                width: auto;
+            }        
+        }
+
+    }
+}

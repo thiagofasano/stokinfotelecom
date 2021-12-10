@@ -6,38 +6,105 @@ const localizacaoOptions = document.querySelector("#localizacaoOptions");
 const sectionPlanos = document.querySelector("#planos .row");
 const telefone = document.querySelectorAll(".telefone");
 const celular = document.querySelectorAll(".celular");
+const centralCliente = document.querySelector(".central-cliente");
+const obsLocalidade = document.querySelector(".obs-localidade");
 
-const formAjuda = document.querySelector("#form-ajuda");
-const inputNome = document.querySelector("#input-nome");
-const inputTelefone = document.querySelector("#input-telefone");
+// Form Ajuda
+const inputAjudaNome = document.querySelector("#input-ajuda-nome");
+const inputAjudaTelefone = document.querySelector("#input-ajuda-telefone");
 const submitFormAjuda = document.querySelector("#submit-form-ajuda");
+
+// Form Trabalhe Conosco
+const inputTrabalheNome = document.querySelector("#input-trabalhe-nome");
+const inputTrabalheEmail = document.querySelector("#input-trabalhe-email");
+const inputTrabalheCelular = document.querySelector("#input-trabalhe-celular");
+const inputTrabalheIdade = document.querySelector("#input-trabalhe-idade");
+const inputTrabalheEstadoCivil = document.querySelector(
+  "#input-trabalhe-estadoCivil"
+);
+const inputTrabalheEndereco = document.querySelector(
+  "#input-trabalhe-endereco"
+);
+const inputTrabalheBairro = document.querySelector("#input-trabalhe-bairro");
+const inputTrabalheUf = document.querySelector("#input-trabalhe-uf");
+const inputTrabalheFormacao = document.querySelector(
+  "#input-trabalhe-formacao"
+);
+const inputTrabalheExperiencia = document.querySelector(
+  "#input-trabalhe-experiencia"
+);
+const inputTrabalheArea = document.querySelector("#input-trabalhe-area");
+
+const submitFormTrabalhe = document.querySelector("#submit-form-trabalhe");
 
 let planos;
 
 $(document).ready(function () {
-  function enviaFormAjuda(event) {
+  function enviaFormAjuda(event, tipo) {
     event.preventDefault();
 
-    let formData = { name: inputNome.value, telefone: inputTelefone.value };
+    let formDataAjuda = {
+      nome: inputAjudaNome.value,
+      telefone: inputAjudaTelefone.value,
+    };
+
+    let formDataTrabalhe = {
+      nome: inputTrabalheNome.value,
+      email: inputTrabalheEmail.value,
+      celular: inputTrabalheCelular.value,
+      idade: inputTrabalheIdade.value,
+      estadoCivil: inputTrabalheEstadoCivil.value,
+      endereco: inputTrabalheEndereco.value,
+      bairro: inputTrabalheBairro.value,
+      cidade: inputTrabalheBairro.value,
+      uf: inputTrabalheUf.value,
+      formacao: inputTrabalheFormacao.value,
+      experiencia: inputTrabalheExperiencia.value,
+      area: inputTrabalheArea.value,
+    };
 
     $.ajax({
       type: "post",
-      url: "mail.php",
-      data: formData,
-      success: function (html) {
-        $("#feedback").html(html);
+      url: tipo === "ajuda" ? "email-ajuda.php" : "email-trabalhe.php",
+      data: tipo === "ajuda" ? formDataAjuda : formDataTrabalhe,
+      success: function (result) {
+        $(tipo === "ajuda" ? ".feedback-ajuda" : ".feedback-trabalhe")
+          .fadeIn(2000)
+          .removeClass("danger")
+          .addClass("success")
+          .html(result);
+
+        $(tipo === "ajuda" ? ".feedback-ajuda" : ".feedback-trabalhe").fadeOut(
+          5000
+        );
+      },
+      error: function (result) {
+        $(tipo === "ajuda" ? ".feedback-ajuda" : ".feedback-trabalhe")
+          .fadeIn(2000)
+          .removeClass("success")
+          .addClass("danger")
+          .html(result.responseText);
+
+        $(tipo === "ajuda" ? ".feedback-ajuda" : ".feedback-trabalhe").fadeOut(
+          5000
+        );
       },
     });
   }
 
-  submitFormAjuda.addEventListener("click", (event) => enviaFormAjuda(event));
+  submitFormAjuda.addEventListener("click", (event) =>
+    enviaFormAjuda(event, "ajuda")
+  );
+  submitFormTrabalhe.addEventListener("click", (event) =>
+    enviaFormAjuda(event, "trabalhe")
+  );
 
   const next = document.querySelector("#next");
   const prev = document.querySelector("#prev");
   const slideArray = [];
-  for (let i = 0; i < document.querySelectorAll(".banner div").length; i++) {
+  for (let i = 0; i < document.querySelectorAll("#banner div").length; i++) {
     slideArray.push(
-      document.querySelectorAll(".banner div")[i].dataset.background
+      document.querySelectorAll("#banner div")[i].dataset.background
     );
   }
 
@@ -48,7 +115,7 @@ $(document).ready(function () {
     if (currentSlideIndex >= slideArray.length) {
       currentSlideIndex = 0;
     }
-    document.querySelector(".banner").style.cssText =
+    document.querySelector("#banner").style.cssText =
       'background: url("' + slideArray[currentSlideIndex] + '") no-repeat;';
   }
 
@@ -57,19 +124,19 @@ $(document).ready(function () {
     if (currentSlideIndex <= -1) {
       currentSlideIndex = slideArray.length - 1;
     }
-    document.querySelector(".banner").style.cssText =
+    document.querySelector("#banner").style.cssText =
       'background: url("' + slideArray[currentSlideIndex] + '") no-repeat;';
   }
 
   next.addEventListener("click", advanceSliderItem);
   prev.addEventListener("click", previousSliderItem);
 
-  let intervalID = setInterval(advanceSliderItem, 5000);
+  setInterval(advanceSliderItem, 5000);
   advanceSliderItem();
 
   var new_width = $(".container").width();
 
-  $(".header-menu ul li a").on("click", function (event) {
+  $("nav ul li a.scroll").on("click", function (event) {
     event.preventDefault();
     $("html,body").animate(
       {
@@ -96,7 +163,16 @@ $(document).ready(function () {
   localizacaoBtn.addEventListener("click", defineLocalEmontaPlanos);
 
   function defineLocalEmontaPlanos() {
-    if (!localizacaoOptions.value) return alert("Selecione uma área.");
+    if (!localizacaoOptions.value) {
+      $(".feedback-localidade")
+        .fadeIn(2000)
+        .addClass("danger")
+        .html("Selecione uma localidade para continuar.");
+
+      $(".feedback-localidade").fadeOut(2000);
+
+      return "";
+    }
 
     localizacaoAtual.innerHTML =
       localizacaoOptions.options[localizacaoOptions.selectedIndex].text;
@@ -104,6 +180,13 @@ $(document).ready(function () {
     fetch("../assets/data/data.json")
       .then((response) => response.json())
       .then((data) => {
+        centralCliente.setAttribute(
+          "href",
+          data[localizacaoOptions.value].central
+        );
+
+        obsLocalidade.innerHTML = data[localizacaoOptions.value].obs;
+
         for (let i = 0; celular.length > i; i++) {
           celular[i].innerHTML = data[localizacaoOptions.value].celular;
         }
@@ -111,41 +194,37 @@ $(document).ready(function () {
         for (let i = 0; telefone.length > i; i++) {
           telefone[i].innerHTML = data[localizacaoOptions.value].telefone;
         }
-      });
 
-    fetch("../assets/data/data.json")
-      .then((response) => response.json())
-      .then((data) => {
         sectionPlanos.innerHTML = data[localizacaoOptions.value].planos
           .map((plano) => {
             return `
-              <div class="plano ${plano.id}">
-                <div class="plano-title">
-                    <h3>${plano.velocidade}</h3>
-                </div>
-                <div class="plano-body">
-                <p class="preco-antigo">R$ ${plano.valorAntigo}, 90</p>
-
-                </div>
-                <div class="plano-price">
-                    <h3><small>R$</small> ${plano.valor}</h3>
-                    <div>,90<span>/mês*</span></div>
-                </div>
-                <div class="plano-obs">
-                    <ul>
-                        ${plano.obs
-                          .map(
-                            (ob) =>
-                              `<li><img src="assets/images/${ob.icone}.png" />${ob.texto}</li>`
-                          )
-                          .join("")}
-                    </ul>
-                    <a href=${
-                      plano.url
-                    } target="_blank" class="btn btn-secondary">Assine Já</a>
-                </div> 
+            <div class="plano ${plano.id}">
+              <div class="plano-title">
+                  <h3>${plano.velocidade}</h3>
               </div>
-                `;
+              <div class="plano-body">
+              <p class="preco-antigo">R$ ${plano.valorAntigo}, 90</p>
+
+              </div>
+              <div class="plano-price">
+                  <h3><small>R$</small> ${plano.valor}</h3>
+                  <div>,90<span>/mês*</span></div>
+              </div>
+              <div class="plano-obs">
+                  <ul>
+                      ${plano.obs
+                        .map(
+                          (ob) =>
+                            `<li><img src="assets/images/${ob.icone}.png" />${ob.texto}</li>`
+                        )
+                        .join("")}
+                  </ul>
+                  <a href=${
+                    plano.url
+                  } target="_blank" class="btn btn-secondary">Assine Já</a>
+              </div> 
+            </div>
+              `;
           })
           .join("");
       });
@@ -164,5 +243,9 @@ $(document).ready(function () {
 
     $(this).addClass("perguntaAtiva");
     $(this).next(".resposta").addClass("respostaAtiva");
+  });
+
+  $("#menu-mobile").click(function () {
+    $(this).next("ul").toggle();
   });
 });

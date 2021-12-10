@@ -1,0 +1,139 @@
+header {
+
+    .localizacaoAtual {
+        background: $silver-light;
+        padding: 10px;
+        text-align: center;
+    
+        .container {
+        display: flex;
+        justify-content: space-between;
+        font-size: 13px;
+
+        flex-direction: column-reverse;
+
+        @include break(desk){
+            flex-direction: row;
+        }
+    
+        div img {
+            vertical-align: middle;
+            margin-right: 10px;
+        }
+    }
+
+
+
+    
+}
+
+
+
+    .row {
+        margin-top: 15px;
+        flex-direction: row;
+        flex-wrap: wrap;
+
+        @include break(desk){
+            flex-wrap: nowrap;
+        }
+
+
+        .logo {
+            margin-top: 22px
+        }
+    
+    
+        nav {
+            margin: 25px 0;
+            flex-basis: 100%;
+            width: 100%;
+
+            @include break(desk){
+                width: auto;
+                order: 2;
+                margin: 15px 0;
+            }
+
+
+            #menu-mobile {
+                position: relative;
+                padding-left: 1.25em;
+                display: block;
+                background: #2067CA;
+                padding: 10px;
+                text-align: center;
+                color: #fff;
+            
+                @include break(desk){
+                    display: none;
+                }
+              }
+            
+            #menu-mobile:before {
+                content: "";
+                position: absolute;
+                left: 15px;
+                top: 20px;
+                width: 1em;
+                height: 0.10em;
+                background: #fff;
+                box-shadow: 
+                  0 0.25em 0 0 #fff,
+                  0 0.5em 0 0 #fff;
+              }
+
+
+            
+            ul {
+                display: flex;
+                flex-direction: column;
+                text-align: center;
+                display: none;
+
+                @include break(desk){
+                    justify-content: space-between;
+                    flex-direction: row;
+                    justify-content: end;
+                    text-align: left;
+                    display: flex;
+                }
+    
+                li {
+                    margin-top: 15px;
+    
+                    @include break(desk){
+                        padding: 15px;
+                        margin-top: 0;
+                    }
+    
+                    a {
+                        color: #393636;
+    
+                        &:hover {
+                            color: $primary;
+                        }
+
+                        &.central-cliente{
+                            width: 135px;
+                            background: #0065BB;
+                            color: #fff;
+                            font-size: 13px;
+                            display: block;
+                            padding: 5px;
+                            border-radius: 5px;
+                            text-align: center;
+                            color: #fff!important;
+                            margin: 0 auto;
+
+                            @include break(desk){
+                                margin: auto;
+                            }
+                        }
+                    }
+                }
+            }
+    
+        }
+    }
+}

@@ -1,0 +1,34 @@
+#banner {
+    background-position: center!important;
+    background-repeat:no-repeat!important;
+    background-size:cover!important;
+    height: 200px;
+
+    
+    @include break(desk){
+        height: 500px;
+    }
+
+    .prev, .next {
+        position:absolute; 
+        height:60px; 
+        top: calc(50% - 60px);
+        display: none;
+
+        @include break(desk){
+            display: initial;
+        }
+
+        &:hover {
+            cursor: pointer;
+        }
+    }
+
+    .prev {
+        left: 40px;
+    }
+
+    .next {
+        right: 40px;
+    }
+}

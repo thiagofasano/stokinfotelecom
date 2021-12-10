@@ -1,0 +1,123 @@
+.section-sobre {
+    background: $silver-light;
+    padding: 20px 0 100px 0;
+
+    @include break(desk){
+        text-align: left;
+    }
+
+    .container {
+        text-align: center;
+    }
+
+    .sobre-globo {
+        display: flex; 
+        align-items: center;
+        flex-direction: column;
+
+        @include break(desk){
+            flex-direction: row;
+        }
+
+        img {
+            max-width: 372px;
+        }
+
+    }
+
+    h1 {
+        color: #053388;
+        margin-top: 50px;
+        font-size: 40px;
+    }
+
+    img {
+        margin-bottom: 25px;
+        -webkit-animation: action 1s infinite  alternate;
+        animation: action 1s infinite  alternate;
+        
+        @-webkit-keyframes action {
+            0% { transform: translateY(0); }
+            100% { transform: translateY(-10px); }
+        }
+        
+        @keyframes action {
+            0% { transform: translateY(0); }
+            100% { transform: translateY(-10px); }
+        }
+        
+    }
+
+    .title {
+        margin:  0;
+
+        @include break(desk){
+            margin-top: -25px;
+        }
+    }
+
+    .diferenciais {
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+        align-items: center;
+
+        @include break(desk){
+            margin-top: 50px;
+            flex-direction: row;
+        }
+
+        div {
+            background-color: #fff;
+            padding: 20px;
+            width: 300px;
+            height: 300px;
+            position: relative;
+            margin-top: 25px;
+
+            @include break(desk){
+                width: 24%;
+                margin-right: 1%;
+                margin-top: 0;
+            }
+
+
+            h2 {
+                position: absolute;
+                bottom: 25px;
+                color: #fff;
+                font-weight: bold;
+                font-size: 26px;
+                padding-right: 7%;
+
+                small {
+                    display: block;
+                    font-size: 18px;
+                    font-weight: normal;
+                    margin-top: 10px;
+                }
+            }
+        }
+
+        .bgsuporte {
+            background: url(../images/bgsuporte.jpg) no-repeat;
+            
+        }
+
+        .bgestabilidade {
+            background: url(../images/bgestabilidade.jpg) no-repeat;
+        }
+
+        .bgcentral {
+            background: url(../images/bgcentral.jpg) no-repeat;
+        }
+
+        .bgwifi {
+            background: url(../images/bgwifi.jpg) no-repeat;
+        }
+    }
+
+
+
+
+}

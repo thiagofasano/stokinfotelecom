@@ -1,0 +1,94 @@
+.section-atendimento {
+    padding: 50px 0;
+    color: #fff;
+    background: rgb(0, 76, 174);
+    background: -moz-linear-gradient(56deg, rgb(0, 76, 174) 20%, rgb(0, 234, 255) 100%);
+    background: -webkit-linear-gradient(56deg, rgb(0, 76, 174) 20%, rgb(0, 234, 255) 100%);
+    background: -o-linear-gradient(56deg, rgb(0, 76, 174) 20%, rgb(0, 234, 255) 100%);
+    background: -ms-linear-gradient(56deg, rgb(0, 76, 174) 20%, rgb(0, 234, 255) 100%);
+    background: linear-gradient(146deg, rgb(0, 76, 174) 20%, rgb(0, 234, 255) 100%);
+
+    .row {
+        justify-content: space-around;
+        flex-direction: column;
+        text-align: center;
+
+        @include break(desk){
+            flex-direction: row;
+
+            .title , .numeros {
+                width: 50%;
+            }
+        }
+    }
+
+
+
+    .title p {
+        text-transform: none;
+    }
+
+    .numeros {
+        margin: 25px 0;
+
+        @include break(desk){
+            text-align: left;
+            margin: 75px 0;
+        }
+
+        h2 {
+            margin-top: 20px;
+        }
+                    
+        img {
+            vertical-align: middle;
+            margin-right: 10px;
+        }
+        
+
+    }
+
+    
+
+
+
+
+ 
+}
+
+
+
+
+#perguntas {
+    background: #F5F5F5;
+    padding: 50px 0;
+    text-align: center;
+
+    h2 {
+        margin-bottom: 50px;;
+    }
+}
+
+.perguntas-e-respostas {
+    width: 100%;
+    padding: 25px;
+    background: #fff;
+    border-radius: 10px;
+    -webkit-box-shadow: 5px 5px 0px 0px rgba(219,219,219,1);
+    -moz-box-shadow: 5px 5px 0px 0px rgba(219,219,219,1);
+    box-shadow: 5px 5px 0px 0px rgba(219,219,219,1);
+
+    
+    @include break(desk){
+        width: 70%;
+        margin: 0 auto;
+    }
+
+    .resposta  {
+        font-size: 85%;
+    }
+
+    .perguntaAtiva {
+        font-weight: bold;
+    }
+}

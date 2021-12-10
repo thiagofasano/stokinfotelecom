@@ -1,0 +1,173 @@
+.section-planos {
+    margin-bottom: 20px;
+
+    .row {
+        justify-content: space-between;
+        flex-wrap: wrap;
+        display: block;
+
+        @include break(desk){
+            display: flex;
+        }
+    }
+
+    .title {
+        text-align: center;
+        margin: 35px 0;
+
+        @include break(desk){
+            text-align: left;
+            margin: 50px 0;
+        }
+    }
+
+    .aviso {
+        color: $silver;
+        text-align: right;
+    }
+
+    .planos-obs {
+        font-size: 13px;
+        margin: 0;
+        line-height: 23px;
+    }
+
+    .planos-ajuda {
+        margin: 25px 0;
+        text-align: center;
+
+        @include break(desk){
+            text-align: left;
+        }
+
+        h2 {
+            font-size: 26px;
+            margin: 0 auto;
+        }
+
+        form {
+            margin: 20px auto;
+            display: flex;
+            justify-content: space-around;
+            flex-direction: column;
+
+            @include break(desk){
+                flex-direction: row;
+                width: 50%;
+            }
+
+            input {
+                margin: 5px 0;
+                padding: 10px;
+
+                @include break(desk){
+                    margin: 0 5px;
+                }
+            }
+
+            button {
+                margin-top: 10px;
+
+                @include break(desk){
+                    margin-top: 0;
+                }
+            }
+        }
+    }
+}
+
+
+.section-planos .plano {
+    text-align: center;
+    border: 1px solid #dbdbdb;
+    border-radius: 5px;    
+    max-width: 100%;
+    margin-bottom: 25px;
+    
+    &-title , &-body , &-price, &-obs {
+        padding: 0 10px;
+    }
+
+    &-title {
+        padding: 10px;
+        background: rgb(0, 76, 174);
+        background: -moz-linear-gradient(56deg, rgb(0, 76, 174) 20%, rgb(0, 234, 255) 100%);
+        background: -webkit-linear-gradient(56deg, rgb(0, 76, 174) 20%, rgb(0, 234, 255) 100%);
+        background: -o-linear-gradient(56deg, rgb(0, 76, 174) 20%, rgb(0, 234, 255) 100%);
+        background: -ms-linear-gradient(56deg, rgb(0, 76, 174) 20%, rgb(0, 234, 255) 100%);
+        background: linear-gradient(146deg, rgb(0, 76, 174) 20%, rgb(0, 234, 255) 100%);
+        -moz-border-radius-topleft: 5px;
+        -webkit-border-top-left-radius: 5px;
+        border-top-left-radius: 5px;
+        -moz-border-radius-topright: 5px;
+        -webkit-border-top-right-radius: 5px;
+        border-top-right-radius: 5px;
+        color: $white;
+        font-size: 34px;
+    }
+
+    &-body {
+        margin-top: 20px;
+    }
+
+    .preco-antigo {
+        text-decoration: line-through;
+        color: #999;
+    }
+
+    &-price {
+        display: flex;
+        flex-flow: row;
+        justify-content: center;
+        margin: 0 15px 25px 15px;
+
+        h3 {
+            font-size: 50px;
+        }
+
+        div {
+            text-align: left;
+            margin: 10px 5px;
+            
+            span {
+               display: block;            
+            }
+        }
+    }
+
+    &-obs {
+        margin-bottom: 30px;
+        padding-bottom: 10px;
+
+        @include break(desk){
+            padding-bottom: 0px;
+        }
+        p {   
+            color: $silver;
+            font-size: 65%;
+
+            &:first-of-type {
+                margin: 20px 0 -20px 0;
+            }
+        }
+
+        ul {
+            font-size: 13px;
+            margin-bottom: 30px;
+
+            li {
+                border-bottom: 1px solid #efefef;
+                padding-bottom: 10px;
+
+                img {
+                    vertical-align: middle;
+                    margin-right: 5px;
+                }
+            }
+        }
+    }
+
+}
+
+
+

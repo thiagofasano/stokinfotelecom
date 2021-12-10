@@ -1,0 +1,56 @@
+.section-trabalhe  {
+    padding: 50px 0; 
+    
+    .row {
+        justify-content: space-around;
+        flex-direction: column;
+
+        @include break(desk){
+            flex-direction: row;
+        }
+
+        .title , .form {
+            width: 100%;
+            text-align: center;
+
+            @include break(desk){
+                width: 50%;
+            }
+        }
+
+        .title p {
+            text-transform: none
+        }
+
+        .title img {
+            display: none;
+
+            @include break(desk){
+                display: block;
+                text-align: center;
+                margin: 0 auto;
+
+            }
+        }
+
+        form {
+            width: 100%;
+            margin: 0 auto;
+            margin-bottom:  0;
+            text-align: left;
+
+            @include break(desk){
+                margin: 110px auto;
+                width: 80%;
+            }
+
+            select {
+                margin: 10px 0;
+            }
+
+            button {
+                margin-top: 20px
+            }
+        }
+    }
+}
