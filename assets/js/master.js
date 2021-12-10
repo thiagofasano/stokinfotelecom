@@ -8,6 +8,7 @@ const telefone = document.querySelectorAll(".telefone");
 const celular = document.querySelectorAll(".celular");
 const centralCliente = document.querySelector(".central-cliente");
 const obsLocalidade = document.querySelector(".obs-localidade");
+const footerEndereco = document.querySelector(".footer-endereco");
 
 // Form Ajuda
 const inputAjudaNome = document.querySelector("#input-ajuda-nome");
@@ -186,6 +187,8 @@ $(document).ready(function () {
         );
 
         obsLocalidade.innerHTML = data[localizacaoOptions.value].obs;
+
+        footerEndereco.innerHTML = data[localizacaoOptions.value].endereco;
 
         for (let i = 0; celular.length > i; i++) {
           celular[i].innerHTML = data[localizacaoOptions.value].celular;
