@@ -42,7 +42,7 @@ try {
 
     //Recipients
     $mail->setFrom("naoresponda@stokinfotelecom.com.br", "Site STOK INFO");
-    $mail->addAddress('igorcruz@stokinfotelecom.com.br', 'Igor Cruz');     // Add a recipient
+    $mail->addAddress('thiagofasano@gmail.com', 'Thiago Fasano');     // Add a recipient
 
 
     //Content
